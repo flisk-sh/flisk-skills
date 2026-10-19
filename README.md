@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-30+-blue)](skills)
 [![Agent Skills](https://img.shields.io/badge/spec-agentskills.io-green)](https://agentskills.io/specification)
+[![skills.sh](https://skills.sh/b/tdk-landscape/tdk-skills)](https://skills.sh/tdk-landscape/tdk-skills)
 
 English | Skills for coding agents that drive the **local-only** TDK CLI.
 
@@ -23,7 +24,7 @@ cp rules/AGENTS.landscape.md ./AGENTS.md                                        
 
 `install.sh` flags: `--agent claude|codex|opencode|cursor|agents`, `--global`, `--project` (default). It only creates symlinks (never copies markdown, never uses `sudo`).
 
-[Website](https://tdk-landscape.github.io/tdk-website/) · [Agents guide](https://tdk-landscape.github.io/tdk-website/docs/agents/) · [Quickstart](https://tdk-landscape.github.io/tdk-website/docs/quickstart/) · [tdk-cli-core](https://github.com/tdk-landscape/tdk-cli-core) · [Report a bug](https://github.com/tdk-landscape/tdk-skills/issues)
+[Website](https://tdk-landscape.github.io/tdk-website/) · [Agents guide](https://tdk-landscape.github.io/tdk-website/docs/agents/) · [Quickstart](https://tdk-landscape.github.io/tdk-website/docs/quickstart/) · [tdk-cli-core](https://github.com/tdk-landscape/tdk-cli-core) · [skills.sh](https://skills.sh/tdk-landscape/tdk-skills) · [Report a bug](https://github.com/tdk-landscape/tdk-skills/issues)
 
 If TDK Skills help your agents, a ⭐ on [this repo](https://github.com/tdk-landscape/tdk-skills) helps other developers find them.
 
