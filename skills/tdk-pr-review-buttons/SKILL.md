@@ -83,7 +83,7 @@ jobs:
             exit 0
           fi
           jq -n --rawfile body "$OUT_FILE" '{body: $body}' > "$PATCH_FILE"
-          gh api --method PATCH "repos/${GITHUB_REPOSITORY}/pulls/${PR_NUMBER}" --input - < "$PATCH_FILE"
+          gh api --method PATCH "repos/${GITHUB_REPOSITORY}/pulls/${PR_NUMBER}" --input - < "$PATCH_FILE" > /dev/null
 
   backfill:
     name: Backfill open PRs
@@ -123,7 +123,7 @@ jobs:
               continue
             fi
             jq -n --rawfile body "$OUT_FILE" '{body: $body}' > "$PATCH_FILE"
-            gh api --method PATCH "repos/${GITHUB_REPOSITORY}/pulls/${number}" --input - < "$PATCH_FILE"
+            gh api --method PATCH "repos/${GITHUB_REPOSITORY}/pulls/${number}" --input - < "$PATCH_FILE" > /dev/null
             echo "Patched PR #${number}"
           done
 ```
