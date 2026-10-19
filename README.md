@@ -51,6 +51,10 @@ If TDK Skills help your agents, a ⭐ on [this repo](https://github.com/tdk-land
 | `tdk-ports` | Port selection, Traefik routing and localhost URLs. |
 | `tdk-upgrade` | Upgrade the CLI and handle generated-file drift. |
 | `tdk-byo` | Bring-your-own resources and existing services. |
+| `tdk-import-compose` | Import a root docker-compose.yml into TDK with `tdk import`. |
+| `tdk-import-any` | Bring any existing Dockerfile, image or process into TDK as BYO. |
+| `tdk-import-procfile` | Turn Procfile processes into TDK BYO resources. |
+| `tdk-import-helm` | Use TDK locally next to an existing Helm chart (keep Helm for production). |
 | `tdk-secrets` | Project `.env`, params and secrets. |
 | `tdk-layout` | Multi-repo layouts and ownership patterns. |
 | `tdk-helm` | Use TDK locally alongside Helm for production. |
