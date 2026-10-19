@@ -27,7 +27,7 @@ export function buildButtonsHtml(prUrl) {
 }
 
 export function buildGeneratedSection(prUrl) {
-  return [MARKER, "", "---", "", "# Review this PR in", buildButtonsHtml(prUrl), "", "<sub>Shared by [@tdk-landscape](https://github.com/tdk-landscape) · [tdk-cli-core](https://github.com/tdk-landscape/tdk-cli-core)</sub>", ""].join("\n");
+  return [MARKER, "", "---", "", "# Review this PR in", buildButtonsHtml(prUrl), "", "<sub>Shared by [@tdk-landscape](https://github.com/tdk-landscape) · [tdk-cli-core](https://github.com/tdk-landscape/tdk-cli-core)</sub>", "", "<sub>If this helps, please ⭐ [star tdk-cli-core](https://github.com/tdk-landscape/tdk-cli-core)</sub>", ""].join("\n");
 }
 
 export function joinAuthorAndSection(authorBody, section) {
