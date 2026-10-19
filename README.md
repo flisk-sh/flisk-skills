@@ -1,7 +1,7 @@
 # TDK Skills — portable Agent Skills for the TDK CLI
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-25+-blue)](skills)
+[![Skills](https://img.shields.io/badge/skills-30+-blue)](skills)
 [![Agent Skills](https://img.shields.io/badge/spec-agentskills.io-green)](https://agentskills.io/specification)
 
 English | Skills for coding agents that drive the **local-only** TDK CLI.
@@ -55,6 +55,13 @@ If TDK Skills help your agents, a ⭐ on [this repo](https://github.com/tdk-land
 | `tdk-layout` | Multi-repo layouts and ownership patterns. |
 | `tdk-helm` | Use TDK locally alongside Helm for production. |
 | `tdk-deploy-alongside` | Work with Helm, Argo CD, Kustomize and cloud hosts. |
+| `tdk-deploy-aws` | Complete separate skill: deploy to AWS (ECS/EKS/App Runner/Lambda). |
+| `tdk-deploy-vercel` | Complete separate skill: deploy frontend/services to Vercel. |
+| `tdk-deploy-gcp` | Complete separate skill: deploy to Google Cloud (Cloud Run/GKE). |
+| `tdk-deploy-azure` | Complete separate skill: deploy to Azure (Container Apps/AKS). |
+| `tdk-deploy-railway` | Complete separate skill: deploy to Railway. |
+| `tdk-deploy-fly` | Complete separate skill: deploy to Fly.io. |
+| `tdk-deploy-render` | Complete separate skill: deploy to Render. |
 | `tdk-frontend` | Frontend scaffolding and generated Vite/nginx configs. |
 | `tdk-python` | Python backend services. |
 | `tdk-build-runtimes` | Bun, Node, Python, Go, Rust, React, Vue, Svelte, Elysia, Fastify, NestJS. |
