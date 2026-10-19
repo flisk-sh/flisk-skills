@@ -25,6 +25,13 @@ Each skill is a folder under `skills/` with a `SKILL.md`:
 - `skills/tdk-layout/SKILL.md`: multi-repo layouts and ownership patterns.
 - `skills/tdk-helm/SKILL.md`: use TDK locally alongside Helm for production.
 - `skills/tdk-deploy-alongside/SKILL.md`: work with Helm, Argo CD, Kustomize and cloud hosts.
+- `skills/tdk-deploy-aws/SKILL.md`: complete separate skill — deploy to AWS.
+- `skills/tdk-deploy-vercel/SKILL.md`: complete separate skill — deploy to Vercel.
+- `skills/tdk-deploy-gcp/SKILL.md`: complete separate skill — deploy to Google Cloud.
+- `skills/tdk-deploy-azure/SKILL.md`: complete separate skill — deploy to Azure.
+- `skills/tdk-deploy-railway/SKILL.md`: complete separate skill — deploy to Railway.
+- `skills/tdk-deploy-fly/SKILL.md`: complete separate skill — deploy to Fly.io.
+- `skills/tdk-deploy-render/SKILL.md`: complete separate skill — deploy to Render.
 - `skills/tdk-frontend/SKILL.md`: frontend scaffolding and generated Vite/nginx configs.
 - `skills/tdk-python/SKILL.md`: Python backend services.
 - `skills/tdk-build-runtimes/SKILL.md`: Bun, Node, Python, Go, Rust, React, Vue, Svelte, Elysia, Fastify, NestJS.
