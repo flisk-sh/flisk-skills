@@ -20,7 +20,7 @@ Installing means changing the target repo: creating two files, committing them, 
 
 1. Confirm the target is a GitHub repo with `gh auth status` OK and a clean working tree (`git status --short` is empty). Stop and report if not.
 2. Create the branch: `git checkout -b add-ai-review-buttons`.
-3. Create `scripts/ai-review-buttons.mjs` from Step 1 below and `.github/workflows/ai-review-buttons.yml` from Step 2 below. Replace `PASTE_CODEX_PATH_HERE` with the real OpenAI mark path.
+3. Create `scripts/ai-review-buttons.mjs` from Step 1 below and `.github/workflows/ai-review-buttons.yml` from Step 2 below. The Codex SVG path is already filled in; do not change it.
 4. Test the transform: run the Step 3 command twice and confirm the second run prints `skip`.
 5. Commit: `git add scripts/ai-review-buttons.mjs .github/workflows/ai-review-buttons.yml && git commit -m "Add AI review buttons to PR descriptions"`.
 6. Push and open the PR: `git push -u origin add-ai-review-buttons`, then `gh pr create --base <default-branch> --title "Add AI review buttons to PR descriptions" --body "Adds Grok, Claude and Codex review buttons to PR descriptions. See the tdk-pr-review-buttons skill."` Use the repo's default branch for `--base`.
@@ -176,7 +176,7 @@ export function buildButtonsHtml(prUrl) {
   const codexLogo = encodeURIComponent(
     "data:image/svg+xml;base64," +
       Buffer.from(
-        `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#fff" d="PASTE_CODEX_PATH_HERE"/></svg>`,
+        `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#fff" d="M22.28 9.82a6 6 0 0 0-.52-4.91 6.05 6.05 0 0 0-6.51-2.9A6.07 6.07 0 0 0 4.98 4.18a6 6 0 0 0-4 2.9 6.05 6.05 0 0 0 .74 7.1 6 6 0 0 0 .51 4.91 6.05 6.05 0 0 0 6.52 2.9A6 6 0 0 0 13.26 24a6.06 6.06 0 0 0 5.77-4.21 6 6 0 0 0 4-2.9 6.06 6.06 0 0 0-.75-7.07z"/></svg>`,
       ).toString("base64"),
   );
   return [
@@ -236,7 +236,7 @@ if (bodyFile && outFile) {
 }
 ```
 
-Replace `PASTE_CODEX_PATH_HERE` with the path data from the OpenAI mark (copy it from `tdk-cli-core/scripts/ai-review-buttons.mjs`, do not retype it). Use the exact badge colours above so the buttons match the reference.
+Replace `M22.28 9.82a6 6 0 0 0-.52-4.91 6.05 6.05 0 0 0-6.51-2.9A6.07 6.07 0 0 0 4.98 4.18a6 6 0 0 0-4 2.9 6.05 6.05 0 0 0 .74 7.1 6 6 0 0 0 .51 4.91 6.05 6.05 0 0 0 6.52 2.9A6 6 0 0 0 13.26 24a6.06 6.06 0 0 0 5.77-4.21 6 6 0 0 0 4-2.9 6.06 6.06 0 0 0-.75-7.07z` with the path data from the OpenAI mark (copy it from `tdk-cli-core/scripts/ai-review-buttons.mjs`, do not retype it). Use the exact badge colours above so the buttons match the reference.
 
 ## Step 2: add the workflow
 
