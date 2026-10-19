@@ -1,6 +1,6 @@
 ---
 name: tdk-contributing
-description: Guide for contributors working inside the tdk-cli-core repository: engine edits, tests, syncing skills, and following AGENTS.cli-core.md.
+description: "Guide for contributors working inside the tdk-cli-core repository: engine edits, tests, syncing skills, and following AGENTS.cli-core.md."
 license: MIT
 compatibility: Requires a tdk-cli-core checkout. Does not deploy.
 metadata:
