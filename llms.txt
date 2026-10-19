@@ -44,6 +44,7 @@ Run `tdk doctor`, then `tdk up`, from the project root. One maintained copy of e
 - [tdk-networks](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-networks/SKILL.md): inspect routed URLs and stack topology
 - [tdk-doctor-verbose](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-doctor-verbose/SKILL.md): deep diagnostic runs with extra verbosity
 - [tdk-contributing](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-contributing/SKILL.md): guide for contributors working on tdk-cli-core
+- [tdk-pr-review-buttons](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-pr-review-buttons/SKILL.md): add "Review this PR in" Grok, Claude and Codex buttons to a repo's pull requests
 
 ## Rules templates
 

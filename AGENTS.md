@@ -42,6 +42,7 @@ Each skill is a folder under `skills/` with a `SKILL.md`:
 - `skills/tdk-networks/SKILL.md`: inspect routed URLs and stack topology.
 - `skills/tdk-doctor-verbose/SKILL.md`: deep diagnostic runs with extra verbosity.
 - `skills/tdk-contributing/SKILL.md`: guide for contributors working on tdk-cli-core.
+- `skills/tdk-pr-review-buttons/SKILL.md`: add "Review this PR in" AI review buttons to a repo's pull requests.
 
 If your tool does not load skills automatically, read the relevant `SKILL.md` directly.
 
