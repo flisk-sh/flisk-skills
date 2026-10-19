@@ -275,6 +275,7 @@ Any temp path works in place of `/tmp`. Run the script twice on the same input: 
 - **Duplicate sections.** The marker was changed. Keep `MARKER` and `LEGACY_MARKER` stable; they are how the script finds its own section.
 - **Author edits vanish.** Someone reordered the logic to trim or rewrite the body. Always append after the author's bytes.
 - **Workflow runs PR code.** Never add a checkout of `github.event.pull_request.head`. This is the reason the trigger is safe.
+- **Star or attribution line missing on a PR.** The PR was opened before the new script reached `main`, or it was merged before the change. Merged PRs are never rewritten. Open a new PR after the script is on the default branch.
 - **Buttons do not appear on forks.** Only happens if the trigger was changed from `pull_request_target` to `pull_request`. Keep `pull_request_target`.
 
 ## Telling people how to review with the buttons
