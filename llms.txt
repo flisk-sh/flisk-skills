@@ -19,6 +19,10 @@ Run `tdk doctor`, then `tdk up`, from the project root. One maintained copy of e
 - [tdk-ports](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-ports/SKILL.md): port selection, Traefik routing and localhost URLs
 - [tdk-upgrade](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-upgrade/SKILL.md): upgrade the CLI and handle generated-file drift
 - [tdk-byo](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-byo/SKILL.md): bring-your-own resources and existing services
+- [tdk-import-compose](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-import-compose/SKILL.md): import a root docker-compose.yml into TDK with `tdk import`
+- [tdk-import-any](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-import-any/SKILL.md): bring any existing Dockerfile, image or process into TDK as BYO
+- [tdk-import-procfile](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-import-procfile/SKILL.md): turn Procfile processes into TDK BYO resources
+- [tdk-import-helm](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-import-helm/SKILL.md): use TDK locally next to an existing Helm chart
 - [tdk-secrets](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-secrets/SKILL.md): project `.env`, params and secrets
 - [tdk-layout](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-layout/SKILL.md): multi-repo layouts and ownership patterns
 - [tdk-helm](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-helm/SKILL.md): use TDK locally alongside Helm for production
