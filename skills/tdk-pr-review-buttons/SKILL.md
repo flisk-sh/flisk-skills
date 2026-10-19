@@ -130,6 +130,10 @@ jobs:
 
 Pin `actions/checkout` to a full commit SHA in your repo if its policy requires it.
 
+## Screenshot
+
+![Review this PR in buttons on a PR description](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-pr-review-buttons/images/review-buttons.png)
+
 ## What the reader sees
 
 ```
