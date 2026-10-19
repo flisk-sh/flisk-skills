@@ -24,7 +24,9 @@ Installing means changing the target repo: creating two files, committing them, 
 4. Test the transform: run the Step 3 command twice and confirm the second run prints `skip`.
 5. Commit: `git add scripts/ai-review-buttons.mjs .github/workflows/ai-review-buttons.yml && git commit -m "Add AI review buttons to PR descriptions"`.
 6. Push and open the PR: `git push -u origin add-ai-review-buttons`, then `gh pr create --base <default-branch> --title "Add AI review buttons to PR descriptions" --body "Adds Grok, Claude and Codex review buttons to PR descriptions. See the tdk-pr-review-buttons skill."` Use the repo's default branch for `--base`.
-7. Tell the user the PR URL. Remind them that open PRs need the backfill run after merge (Step 3, item 1).
+7. Tell the user the PR URL.
+8. Buttons do not appear until the workflow is on the default branch. A PR that only adds the workflow gets no buttons, and a merged PR is never re-triggered. So after this PR is merged, run the backfill once: **Actions → AI review buttons → Run workflow**. Open PRs get buttons. Test on a PR opened after the merge, or on a PR that is open at merge time.
+9. Do not test on a PR that already added the workflow and was merged. Open a new test PR after the workflow is on the default branch.
 
 ### Workflow file (`.github/workflows/ai-review-buttons.yml`)
 
