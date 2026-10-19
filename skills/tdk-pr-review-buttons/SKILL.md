@@ -16,7 +16,7 @@ Reference implementation: `tdk-cli-core` — `scripts/ai-review-buttons.mjs`, `.
 
 ## Install in a repository (do this when asked)
 
-Installing means changing the target repo: creating two files, committing them, and opening a PR. Do not merge the PR unless the user asks. Work in the target repo, on a new branch, never on its default branch.
+Installing means changing the target repo: creating two files, committing them, and opening a PR with the review buttons workflow included. Do not merge the PR unless the user asks. Work in the target repo, on a new branch, never on its default branch.
 
 1. Confirm the target is a GitHub repo with `gh auth status` OK and a clean working tree (`git status --short` is empty). Stop and report if not.
 2. Create the branch: `git checkout -b add-ai-review-buttons`.
