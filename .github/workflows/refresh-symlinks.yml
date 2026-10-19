@@ -1,0 +1,35 @@
+name: Refresh .agents/skills symlinks
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'skills/**'
+      - 'scripts/refresh-agents-skills-symlinks.sh'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Refresh symlinks
+        run: bash scripts/refresh-agents-skills-symlinks.sh
+
+      - name: Commit if changed
+        run: |
+          if [ -n "$(git status --porcelain .agents/skills)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add .agents/skills
+            git commit -m "Refresh .agents/skills symlinks for all skills"
+            git push
+          else
+            echo "No changes"
+          fi
