@@ -14,6 +14,10 @@ The buttons are plain Markdown links appended to the end of a PR description. Cl
 
 Reference implementation: `tdk-cli-core` — `scripts/ai-review-buttons.mjs`, `.github/workflows/ai-review-buttons.yml`, `docs/contributing/04-review-a-pr.md`.
 
+## Screenshot
+
+![Review this PR in buttons on a PR description](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-pr-review-buttons/images/review-buttons.png)
+
 ## Install in a repository (do this when asked)
 
 Installing means changing the target repo: creating two files, committing them, and opening a PR with the review buttons workflow included. Do not merge the PR unless the user asks. Work in the target repo, on a new branch, never on its default branch.
@@ -129,10 +133,6 @@ jobs:
 ```
 
 Pin `actions/checkout` to a full commit SHA in your repo if its policy requires it.
-
-## Screenshot
-
-![Review this PR in buttons on a PR description](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-pr-review-buttons/images/review-buttons.png)
 
 ## What the reader sees
 
