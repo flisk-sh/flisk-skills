@@ -1,6 +1,6 @@
 ---
 name: tdk-data
-description: Manage local data for TDK stacks: reset, seed, snapshot and restore Postgres volumes. Use when you need a clean database, reproducible seed data, or to preserve state across tdk down.
+description: "Manage local data for TDK stacks: reset, seed, snapshot and restore Postgres volumes. Use when you need a clean database, reproducible seed data, or to preserve state across tdk down."
 license: MIT
 compatibility: Requires the tdk CLI, Docker and a running or previously run stack. Does not deploy.
 metadata:
