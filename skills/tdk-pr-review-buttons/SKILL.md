@@ -14,6 +14,120 @@ The buttons are plain Markdown links appended to the end of a PR description. Cl
 
 Reference implementation: `tdk-cli-core` — `scripts/ai-review-buttons.mjs`, `.github/workflows/ai-review-buttons.yml`, `docs/contributing/04-review-a-pr.md`.
 
+## Install in a repository (do this when asked)
+
+Installing means changing the target repo: creating two files, committing them, and opening a PR. Do not merge the PR unless the user asks. Work in the target repo, on a new branch, never on its default branch.
+
+1. Confirm the target is a GitHub repo with `gh auth status` OK and a clean working tree (`git status --short` is empty). Stop and report if not.
+2. Create the branch: `git checkout -b add-ai-review-buttons`.
+3. Create `scripts/ai-review-buttons.mjs` from Step 1 below and `.github/workflows/ai-review-buttons.yml` from Step 2 below. Replace `PASTE_CODEX_PATH_HERE` with the real OpenAI mark path.
+4. Test the transform: run the Step 3 command twice and confirm the second run prints `skip`.
+5. Commit: `git add scripts/ai-review-buttons.mjs .github/workflows/ai-review-buttons.yml && git commit -m "Add AI review buttons to PR descriptions"`.
+6. Push and open the PR: `git push -u origin add-ai-review-buttons`, then `gh pr create --base <default-branch> --title "Add AI review buttons to PR descriptions" --body "Adds Grok, Claude and Codex review buttons to PR descriptions. See the tdk-pr-review-buttons skill."` Use the repo's default branch for `--base`.
+7. Tell the user the PR URL. Remind them that open PRs need the backfill run after merge (Step 3, item 1).
+
+### Workflow file (`.github/workflows/ai-review-buttons.yml`)
+
+```yaml
+name: 🤖 AI review buttons
+
+on:
+  pull_request_target: # never checks out or runs PR code; only writes the PR body
+    types: [opened, reopened, edited]
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: ai-review-buttons-${{ github.event.pull_request.number || 'backfill' }}
+  cancel-in-progress: false
+
+jobs:
+  append:
+    name: Append AI review buttons
+    if: github.event_name == 'pull_request_target'
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+      - name: Append AI review buttons
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          OUT_FILE: ${{ runner.temp }}/pr-body-new.md
+          PATCH_FILE: ${{ runner.temp }}/pr-body-patch.json
+        run: |
+          set -euo pipefail
+          gh api "repos/${GITHUB_REPOSITORY}/pulls/${PR_NUMBER}" --jq '(.body // "") | @base64' > "${OUT_FILE}.b64"
+          base64 -d < "${OUT_FILE}.b64" > "${OUT_FILE}.in"
+          export BODY_FILE="${OUT_FILE}.in"
+          node scripts/ai-review-buttons.mjs
+          if cmp -s "${OUT_FILE}.in" "$OUT_FILE"; then
+            echo "Body unchanged; nothing to PATCH."
+            exit 0
+          fi
+          # Lost-update guard: skip if the author changed the body since the snapshot.
+          gh api "repos/${GITHUB_REPOSITORY}/pulls/${PR_NUMBER}" --jq '(.body // "") | @base64' > "${OUT_FILE}.now.b64"
+          base64 -d < "${OUT_FILE}.now.b64" > "${OUT_FILE}.now"
+          if ! cmp -s "${OUT_FILE}.in" "${OUT_FILE}.now"; then
+            echo "Body changed since snapshot; skipping PATCH to avoid a lost update."
+            exit 0
+          fi
+          jq -n --rawfile body "$OUT_FILE" '{body: $body}' > "$PATCH_FILE"
+          gh api --method PATCH "repos/${GITHUB_REPOSITORY}/pulls/${PR_NUMBER}" --input - < "$PATCH_FILE"
+
+  backfill:
+    name: Backfill open PRs
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+      - name: Backfill open PRs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh pr list --repo "${GITHUB_REPOSITORY}" --state open --limit 100 \
+            --json number,title,url --jq '.[] | [.number, .title, .url] | @tsv' |
+          while IFS=$'\t' read -r number title url; do
+            export PR_NUMBER="$number" PR_URL="$url"
+            export BODY_FILE="${RUNNER_TEMP}/in-${number}.md"
+            export OUT_FILE="${RUNNER_TEMP}/out-${number}.md"
+            export PATCH_FILE="${RUNNER_TEMP}/patch-${number}.json"
+            gh api "repos/${GITHUB_REPOSITORY}/pulls/${number}" --jq '(.body // "") | @base64' > "${BODY_FILE}.b64"
+            base64 -d < "${BODY_FILE}.b64" > "$BODY_FILE"
+            node scripts/ai-review-buttons.mjs
+            if cmp -s "$BODY_FILE" "$OUT_FILE"; then
+              continue
+            fi
+            gh api "repos/${GITHUB_REPOSITORY}/pulls/${number}" --jq '(.body // "") | @base64' > "${BODY_FILE}.now.b64"
+            base64 -d < "${BODY_FILE}.now.b64" > "${BODY_FILE}.now"
+            if ! cmp -s "$BODY_FILE" "${BODY_FILE}.now"; then
+              echo "PR #${number} body changed since snapshot; skipping."
+              continue
+            fi
+            jq -n --rawfile body "$OUT_FILE" '{body: $body}' > "$PATCH_FILE"
+            gh api --method PATCH "repos/${GITHUB_REPOSITORY}/pulls/${number}" --input - < "$PATCH_FILE"
+            echo "Patched PR #${number}"
+          done
+```
+
+Pin `actions/checkout` to a full commit SHA in your repo if its policy requires it.
+
 ## What the reader sees
 
 ```
