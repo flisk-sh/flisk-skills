@@ -26,3 +26,4 @@ Use the CLI's environment and project checks as the starting point for TDK setup
 - Ask before starting a large landscape or a task likely to build or launch many containers; it can take several minutes and use substantial resources.
 - Avoid stopping containers by broad name patterns. Identify the target project and stack first.
 - Treat diagnostic output as evidence. If it does not identify a cause, report what was observed and gather the next relevant check instead of guessing.
+
