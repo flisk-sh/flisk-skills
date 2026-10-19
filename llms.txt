@@ -23,6 +23,13 @@ Run `tdk doctor`, then `tdk up`, from the project root. One maintained copy of e
 - [tdk-layout](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-layout/SKILL.md): multi-repo layouts and ownership patterns
 - [tdk-helm](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-helm/SKILL.md): use TDK locally alongside Helm for production
 - [tdk-deploy-alongside](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-deploy-alongside/SKILL.md): work with Helm, Argo CD, Kustomize and cloud hosts
+- [tdk-deploy-aws](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-deploy-aws/SKILL.md): complete separate skill — deploy to AWS (ECS/EKS/App Runner/Lambda)
+- [tdk-deploy-vercel](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-deploy-vercel/SKILL.md): complete separate skill — deploy frontend/services to Vercel
+- [tdk-deploy-gcp](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-deploy-gcp/SKILL.md): complete separate skill — deploy to Google Cloud (Cloud Run/GKE)
+- [tdk-deploy-azure](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-deploy-azure/SKILL.md): complete separate skill — deploy to Azure (Container Apps/AKS)
+- [tdk-deploy-railway](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-deploy-railway/SKILL.md): complete separate skill — deploy to Railway
+- [tdk-deploy-fly](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-deploy-fly/SKILL.md): complete separate skill — deploy to Fly.io
+- [tdk-deploy-render](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-deploy-render/SKILL.md): complete separate skill — deploy to Render
 - [tdk-frontend](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-frontend/SKILL.md): frontend scaffolding and generated Vite/nginx configs
 - [tdk-python](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-python/SKILL.md): Python backend services
 - [tdk-build-runtimes](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-build-runtimes/SKILL.md): Bun, Node, Python, Go, Rust, React, Vue, Svelte, Elysia, Fastify, NestJS
