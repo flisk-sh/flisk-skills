@@ -1,6 +1,6 @@
 ---
 name: tdk-contributing
-description: "Guide for contributors working inside the tdk-cli-core repository: engine edits, tests, syncing skills, and following AGENTS.cli-core.md."
+description: "Guide for contributors working inside the flisk repository: engine edits, tests, syncing skills, and following AGENTS.cli-core.md."
 license: MIT
 compatibility: Requires a flisk checkout. Does not deploy.
 metadata:
@@ -8,7 +8,7 @@ metadata:
   version: "1.0"
 ---
 
-# Contributing to tdk-cli-core
+# Contributing to flisk
 
 Use the contributor rules and keep the skills mirror in sync.
 

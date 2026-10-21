@@ -76,7 +76,7 @@ If TDK Skills help your agents, a ⭐ on [this repo](https://github.com/flisk-sh
 | `tdk-service-json` | Edit and validate the service.json contract. |
 | `tdk-networks` | Inspect routed URLs and stack topology. |
 | `tdk-doctor-verbose` | Deep diagnostic runs with extra verbosity. |
-| `tdk-contributing` | Guide for contributors working on tdk-cli-core. |
+| `tdk-contributing` | Guide for contributors working on flisk. |
 | `tdk-pr-review-buttons` | Add "Review this PR in" Grok, Claude and Codex buttons to a repo's pull requests. |
 
 More skills are welcome — see [SPEC.md](SPEC.md) and open a PR.
