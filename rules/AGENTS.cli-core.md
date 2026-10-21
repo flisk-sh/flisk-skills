@@ -13,6 +13,6 @@ This repository implements the TDK CLI, discovery system and Tilt engine. The us
 
 ## Documentation and skills
 
-- Shared, reusable agent skills are maintained in <https://github.com/tdk-landscape/tdk-skills>.
+- Shared, reusable agent skills are maintained in <https://github.com/flisk-sh/tdk-skills>.
 - Update command documentation when a CLI command's flags, behavior or output changes.
 - Do not copy the whole shared skill catalog into this repository. If a local mirror is needed, make it generated and document its sync source.

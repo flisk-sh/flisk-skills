@@ -16,7 +16,7 @@ Reference implementation: `tdk-cli-core` — `scripts/ai-review-buttons.mjs`, `.
 
 ## Screenshot
 
-![Review this PR in buttons on a PR description](https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/skills/tdk-pr-review-buttons/images/review-buttons.png)
+![Review this PR in buttons on a PR description](https://raw.githubusercontent.com/flisk-sh/tdk-skills/main/skills/tdk-pr-review-buttons/images/review-buttons.png)
 
 ## Install in a repository (do this when asked)
 
@@ -193,7 +193,7 @@ export function buildButtonsHtml(prUrl) {
 }
 
 export function buildGeneratedSection(prUrl) {
-  return [MARKER, "", "---", "", "# Review this PR in", buildButtonsHtml(prUrl), "", "<sub>Shared by [@tdk-landscape](https://github.com/tdk-landscape) · [tdk-cli-core](https://github.com/tdk-landscape/tdk-cli-core) · If this helps, please ⭐ [star tdk-cli-core](https://github.com/tdk-landscape/tdk-cli-core)</sub>", ""].join("\n");
+  return [MARKER, "", "---", "", "# Review this PR in", buildButtonsHtml(prUrl), "", "<sub>Shared by [@tdk-landscape](https://github.com/flisk-sh) · [tdk-cli-core](https://github.com/flisk-sh/flisk) · If this helps, please ⭐ [star tdk-cli-core](https://github.com/flisk-sh/flisk)</sub>", ""].join("\n");
 }
 
 export function joinAuthorAndSection(authorBody, section) {

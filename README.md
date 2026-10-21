@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-30+-blue)](skills)
 [![Agent Skills](https://img.shields.io/badge/spec-agentskills.io-green)](https://agentskills.io/specification)
-[![skills.sh](https://skills.sh/b/tdk-landscape/tdk-skills)](https://skills.sh/tdk-landscape/tdk-skills)
+[![skills.sh](https://skills.sh/b/flisk-sh/tdk-skills)](https://skills.sh/flisk-sh/tdk-skills)
 
 English | Skills for coding agents that drive the **local-only** TDK CLI.
 
@@ -16,17 +16,17 @@ Coding agents are excellent at writing application logic and terrible at keeping
 ### ⚡ Install in seconds
 
 ```bash
-curl -fsSL https://tdk-landscape.github.io/install.sh | sh                                              # 1. CLI
-npx skills add tdk-landscape/tdk-skills                                                                 # 2. skills
-curl -fsSL https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/install.sh | sh -s -- --agent codex   # 2 (alt)
+curl -fsSL https://flisk.sh/install.sh | sh                                              # 1. CLI
+npx skills add flisk-sh/tdk-skills                                                                 # 2. skills
+curl -fsSL https://raw.githubusercontent.com/flisk-sh/tdk-skills/main/install.sh | sh -s -- --agent codex   # 2 (alt)
 cp rules/AGENTS.landscape.md ./AGENTS.md                                                                # 3. rules template
 ```
 
 `install.sh` flags: `--agent claude|codex|opencode|cursor|agents`, `--global`, `--project` (default). It only creates symlinks (never copies markdown, never uses `sudo`).
 
-[Website](https://tdk-landscape.github.io/tdk-website/) · [Agents guide](https://tdk-landscape.github.io/tdk-website/docs/agents/) · [Quickstart](https://tdk-landscape.github.io/tdk-website/docs/quickstart/) · [tdk-cli-core](https://github.com/tdk-landscape/tdk-cli-core) · [skills.sh](https://skills.sh/tdk-landscape/tdk-skills) · [Report a bug](https://github.com/tdk-landscape/tdk-skills/issues)
+[Website](https://flisk.sh/) · [Agents guide](https://flisk.sh/docs/agents/) · [Quickstart](https://flisk.sh/docs/quickstart/) · [tdk-cli-core](https://github.com/flisk-sh/flisk) · [skills.sh](https://skills.sh/flisk-sh/tdk-skills) · [Report a bug](https://github.com/flisk-sh/tdk-skills/issues)
 
-If TDK Skills help your agents, a ⭐ on [this repo](https://github.com/tdk-landscape/tdk-skills) helps other developers find them.
+If TDK Skills help your agents, a ⭐ on [this repo](https://github.com/flisk-sh/tdk-skills) helps other developers find them.
 
 ## Why TDK Skills?
 
@@ -85,7 +85,7 @@ More skills are welcome — see [SPEC.md](SPEC.md) and open a PR.
 
 | Tool | Status |
 |---|---|
-| Claude Code | Documented path `.claude/skills/<name>/SKILL.md`: `install.sh --agent claude`. Optional plugin: `/plugin marketplace add tdk-landscape/tdk-skills`, then `/plugin install tdk-cli@tdk-skills`. |
+| Claude Code | Documented path `.claude/skills/<name>/SKILL.md`: `install.sh --agent claude`. Optional plugin: `/plugin marketplace add flisk-sh/tdk-skills`, then `/plugin install tdk-cli@tdk-skills`. |
 | Codex | Documented path `.agents/skills/<name>/SKILL.md`: `install.sh --agent codex`. |
 | OpenCode | Documented paths `.agents/skills`, `.claude/skills`, `.opencode/skills`: `install.sh --agent opencode`. |
 | Cursor | Documented path `.cursor/skills/<name>/SKILL.md`: `install.sh --agent cursor`. |
@@ -96,7 +96,7 @@ More skills are welcome — see [SPEC.md](SPEC.md) and open a PR.
 | Traycer | Uses `AGENTS.md` only; skill auto-load unverified. |
 | Conductor-class tools | Uses `AGENTS.md` only; skill auto-load unverified. |
 
-`npx skills add tdk-landscape/tdk-skills` installs into the shared `.agents/skills/` path used by several tools.
+`npx skills add flisk-sh/tdk-skills` installs into the shared `.agents/skills/` path used by several tools.
 
 ## Repository guidance
 
@@ -107,13 +107,13 @@ Copy the applicable template into a repository as its root `AGENTS.md`, then add
 
 ## Updating skills
 
-Edit `skills/` only; the plugin and `.agents/skills/` are symlinks. Review a skill here first. Product-specific command behavior should be checked against [`tdk-cli-core`](https://github.com/tdk-landscape/tdk-cli-core) before publishing. Keep any mirror in the CLI repository synchronized from this source.
+Edit `skills/` only; the plugin and `.agents/skills/` are symlinks. Review a skill here first. Product-specific command behavior should be checked against [`tdk-cli-core`](https://github.com/flisk-sh/flisk) before publishing. Keep any mirror in the CLI repository synchronized from this source.
 
 ## For agents and LLMs
 
 - [`llms.txt`](llms.txt) indexes every skill and rules template with raw URLs.
 - [`AGENTS.md`](AGENTS.md) is the short instruction file for tools that don't load skills.
-- The TDK site publishes its own index at <https://tdk-landscape.github.io/tdk-website/llms.txt> and a guide at <https://tdk-landscape.github.io/tdk-website/docs/agents/>.
+- The TDK site publishes its own index at <https://flisk.sh/llms.txt> and a guide at <https://flisk.sh/docs/agents/>.
 
 See [SPEC.md](SPEC.md) for the design.
 

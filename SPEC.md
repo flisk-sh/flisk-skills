@@ -1,6 +1,6 @@
 # Spec: portable TDK skills
 
-Status: implemented (2026-10-04) · Package: `tdk-landscape/tdk-skills`
+Status: implemented (2026-10-04) · Package: `flisk-sh/tdk-skills`
 
 ## Goal
 
@@ -72,9 +72,9 @@ Claude plugin install stays as an optional extra, not the primary path.
 A user should not have to hand-copy folders. Prefer the existing `npx skills` flow if the repo layout matches it. Otherwise ship an `install.sh` that only copies or symlinks.
 
 ```bash
-npx skills add tdk-landscape/tdk-skills
+npx skills add flisk-sh/tdk-skills
 # or
-curl -fsSL https://raw.githubusercontent.com/tdk-landscape/tdk-skills/main/install.sh | sh -s -- --agent opencode
+curl -fsSL https://raw.githubusercontent.com/flisk-sh/tdk-skills/main/install.sh | sh -s -- --agent opencode
 ```
 
 Flags: `--agent claude|codex|opencode|cursor|agents`, `--global`, `--project`.
