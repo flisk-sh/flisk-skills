@@ -27,7 +27,7 @@ export function buildButtonsHtml(prUrl) {
 }
 
 export function buildGeneratedSection(prUrl) {
-  return [MARKER, "", "---", "", "# Review this PR in", buildButtonsHtml(prUrl), "", "<sub>Shared by [@tdk-landscape](https://github.com/flisk-sh) · [flisk](https://github.com/flisk-sh/flisk) · If this helps, please ⭐ [star flisk](https://github.com/flisk-sh/flisk)</sub>", ""].join("\n");
+  return [MARKER, "", "---", "", "# Review this PR in", buildButtonsHtml(prUrl), "", "<sub>Shared by [@flisk-sh](https://github.com/flisk-sh) · [flisk](https://github.com/flisk-sh/flisk) · If this helps, please ⭐ [star flisk](https://github.com/flisk-sh/flisk)</sub>", ""].join("\n");
 }
 
 export function joinAuthorAndSection(authorBody, section) {

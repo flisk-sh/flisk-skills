@@ -1,6 +1,6 @@
 ---
 name: tdk-benchmark
-description: Measure how many services fit on a machine, idle memory per service, start times and image sizes for TDK stacks. Use the verified scripts and methods from tdk-cli-core. Use when validating the north-star of 100 services on 16 GB or investigating performance.
+description: Measure how many services fit on a machine, idle memory per service, start times and image sizes for TDK stacks. Use the verified scripts and methods from flisk. Use when validating the north-star of 100 services on 16 GB or investigating performance.
 license: MIT
 compatibility: Requires the tdk CLI, Docker and the benchmark scripts in flisk. Does not deploy.
 metadata:

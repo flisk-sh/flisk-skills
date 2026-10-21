@@ -1,6 +1,6 @@
 ---
 name: tdk-pr-review-buttons
-description: Add "Review this PR in" Grok, Claude and Codex buttons to a GitHub repository's pull request descriptions, using the same workflow and script as tdk-cli-core. Use when someone asks how the review buttons work or wants them in their own repo.
+description: Add "Review this PR in" Grok, Claude and Codex buttons to a GitHub repository's pull request descriptions, using the same workflow and script as flisk. Use when someone asks how the review buttons work or wants them in their own repo.
 license: MIT
 compatibility: Requires a GitHub repository with GitHub Actions and Node.js 20+. Does not deploy and calls no AI API.
 metadata:
@@ -193,7 +193,7 @@ export function buildButtonsHtml(prUrl) {
 }
 
 export function buildGeneratedSection(prUrl) {
-  return [MARKER, "", "---", "", "# Review this PR in", buildButtonsHtml(prUrl), "", "<sub>Shared by [@tdk-landscape](https://github.com/flisk-sh) · [flisk](https://github.com/flisk-sh/flisk) · If this helps, please ⭐ [star flisk](https://github.com/flisk-sh/flisk)</sub>", ""].join("\n");
+  return [MARKER, "", "---", "", "# Review this PR in", buildButtonsHtml(prUrl), "", "<sub>Shared by [@flisk-sh](https://github.com/flisk-sh) · [flisk](https://github.com/flisk-sh/flisk) · If this helps, please ⭐ [star flisk](https://github.com/flisk-sh/flisk)</sub>", ""].join("\n");
 }
 
 export function joinAuthorAndSection(authorBody, section) {
@@ -242,7 +242,7 @@ if (bodyFile && outFile) {
 }
 ```
 
-Replace `M22.28 9.82a6 6 0 0 0-.52-4.91 6.05 6.05 0 0 0-6.51-2.9A6.07 6.07 0 0 0 4.98 4.18a6 6 0 0 0-4 2.9 6.05 6.05 0 0 0 .74 7.1 6 6 0 0 0 .51 4.91 6.05 6.05 0 0 0 6.52 2.9A6 6 0 0 0 13.26 24a6.06 6.06 0 0 0 5.77-4.21 6 6 0 0 0 4-2.9 6.06 6.06 0 0 0-.75-7.07z` with the path data from the OpenAI mark (copy it from `tdk-cli-core/scripts/ai-review-buttons.mjs`, do not retype it). Use the exact badge colours above so the buttons match the reference.
+Replace `M22.28 9.82a6 6 0 0 0-.52-4.91 6.05 6.05 0 0 0-6.51-2.9A6.07 6.07 0 0 0 4.98 4.18a6 6 0 0 0-4 2.9 6.05 6.05 0 0 0 .74 7.1 6 6 0 0 0 .51 4.91 6.05 6.05 0 0 0 6.52 2.9A6 6 0 0 0 13.26 24a6.06 6.06 0 0 0 5.77-4.21 6 6 0 0 0 4-2.9 6.06 6.06 0 0 0-.75-7.07z` with the path data from the OpenAI mark (copy it from `flisk/scripts/ai-review-buttons.mjs`, do not retype it). Use the exact badge colours above so the buttons match the reference.
 
 ## Step 2: add the workflow
 

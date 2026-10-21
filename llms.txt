@@ -43,13 +43,13 @@ Run `tdk doctor`, then `tdk up`, from the project root. One maintained copy of e
 - [tdk-service-json](https://raw.githubusercontent.com/flisk-sh/tdk-skills/main/skills/tdk-service-json/SKILL.md): edit and validate the service.json contract
 - [tdk-networks](https://raw.githubusercontent.com/flisk-sh/tdk-skills/main/skills/tdk-networks/SKILL.md): inspect routed URLs and stack topology
 - [tdk-doctor-verbose](https://raw.githubusercontent.com/flisk-sh/tdk-skills/main/skills/tdk-doctor-verbose/SKILL.md): deep diagnostic runs with extra verbosity
-- [tdk-contributing](https://raw.githubusercontent.com/flisk-sh/tdk-skills/main/skills/tdk-contributing/SKILL.md): guide for contributors working on tdk-cli-core
+- [tdk-contributing](https://raw.githubusercontent.com/flisk-sh/tdk-skills/main/skills/tdk-contributing/SKILL.md): guide for contributors working on flisk
 - [tdk-pr-review-buttons](https://raw.githubusercontent.com/flisk-sh/tdk-skills/main/skills/tdk-pr-review-buttons/SKILL.md): add "Review this PR in" Grok, Claude and Codex buttons to a repo's pull requests
 
 ## Rules templates
 
 - [AGENTS.landscape.md](https://raw.githubusercontent.com/flisk-sh/tdk-skills/main/rules/AGENTS.landscape.md): for TDK project, example and starter repos
-- [AGENTS.cli-core.md](https://raw.githubusercontent.com/flisk-sh/tdk-skills/main/rules/AGENTS.cli-core.md): for contributors to tdk-cli-core
+- [AGENTS.cli-core.md](https://raw.githubusercontent.com/flisk-sh/tdk-skills/main/rules/AGENTS.cli-core.md): for contributors to flisk
 
 ## Install
 
