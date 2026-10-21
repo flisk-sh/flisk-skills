@@ -15,7 +15,7 @@ Core CLI is MIT and needs no key. Follow the upgrading guide.
 ## Workflow
 
 1. Check current version with `tdk --version`.
-2. Install the new version (`npm install -g @tdk-landscape/tdk-cli-core` or the binary installer).
+2. Install the new version (`npm install -g @flisk-sh/flisk` or the binary installer).
 3. Run `tdk doctor` in each project; regenerate generated files if drift is reported.
 4. Review the changelog and docs/upgrading.md for any required project changes.
 5. Re-run `tdk up` and confirm stacks start.
