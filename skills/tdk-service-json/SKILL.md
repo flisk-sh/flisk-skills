@@ -4,7 +4,7 @@ description: Edit, validate and understand the service.json contract that drives
 license: MIT
 compatibility: Requires the tdk CLI. Does not deploy.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 
@@ -18,7 +18,7 @@ Every resource is defined by one service.json. TDK generates the local runtime f
 2. Edit only the contract fields (type, dependencies, ports, health, features).
 3. Run `tdk doctor` to validate.
 4. Regenerate with `tdk resource` or let `tdk up` pick up changes.
-5. See the service schema in tdk-cli-core (`engine/schemas/service-schema.json`).
+5. See the service schema in flisk (`engine/schemas/service-schema.json`).
 
 ## Guardrails
 

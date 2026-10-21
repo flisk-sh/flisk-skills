@@ -2,9 +2,9 @@
 name: tdk-contributing
 description: "Guide for contributors working inside the tdk-cli-core repository: engine edits, tests, syncing skills, and following AGENTS.cli-core.md."
 license: MIT
-compatibility: Requires a tdk-cli-core checkout. Does not deploy.
+compatibility: Requires a flisk checkout. Does not deploy.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 
@@ -16,7 +16,7 @@ Use the contributor rules and keep the skills mirror in sync.
 
 1. Read `rules/AGENTS.cli-core.md` and copy it as the root AGENTS.md when working in core.
 2. Edit engine, CLI or generators; never hand-edit the generated skill mirrors.
-3. After changing skills in tdk-skills, run the sync script in tdk-cli-core.
+3. After changing skills in tdk-skills, run the sync script in flisk.
 4. Run relevant tests (`tests/tilt-engine/`, e2e) before committing.
 5. See CONTRIBUTING.md and the operator runbook.
 

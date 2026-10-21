@@ -4,7 +4,7 @@ description: Run tdk doctor with extra verbosity and interpret detailed output w
 license: MIT
 compatibility: Requires the tdk CLI. Does not deploy.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 

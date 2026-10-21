@@ -4,7 +4,7 @@ description: Understand TDK port selection (port 80 or 8080-8180), Traefik routi
 license: MIT
 compatibility: Requires the tdk CLI and Docker. Does not deploy.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 

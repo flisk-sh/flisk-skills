@@ -4,7 +4,7 @@ description: Run a service locally with TDK while keeping the existing Helm char
 license: MIT
 compatibility: Requires the tdk CLI. Does not deploy. Does not install or edit Helm charts.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 

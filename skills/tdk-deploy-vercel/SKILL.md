@@ -4,7 +4,7 @@ description: Deploy a TDK frontend or compatible service to Vercel. Complete sep
 license: MIT
 compatibility: Requires a working local TDK stack first. Vercel CLI or Git integration recommended.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 

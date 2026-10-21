@@ -4,7 +4,7 @@ description: Upgrade the TDK CLI, pin versions, and handle breaking changes or g
 license: MIT
 compatibility: Requires the tdk CLI. Does not deploy.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 

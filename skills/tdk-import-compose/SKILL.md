@@ -4,7 +4,7 @@ description: Import an existing Docker Compose project into TDK using `tdk impor
 license: MIT
 compatibility: Requires the tdk CLI 1.3.145 or later. Does not deploy. Does not start containers.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 

@@ -4,7 +4,7 @@ description: Deploy a TDK local stack to Render. Complete separate skill for Ren
 license: MIT
 compatibility: Requires a working local TDK stack first. Render dashboard or render.yaml recommended.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 

@@ -4,7 +4,7 @@ description: Deploy a TDK local stack to Azure (Container Apps, AKS, App Service
 license: MIT
 compatibility: Requires a working local TDK stack first. Azure CLI recommended.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 

@@ -4,7 +4,7 @@ description: Deploy a TDK local stack to Heroku. Complete separate skill for Her
 license: MIT
 compatibility: Requires a working local TDK stack first. Heroku CLI recommended.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 

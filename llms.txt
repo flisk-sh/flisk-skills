@@ -60,4 +60,4 @@ Run `tdk doctor`, then `tdk up`, from the project root. One maintained copy of e
 
 - [TDK docs](https://flisk.sh/docs/quickstart/): quick start and configuration
 - [TDK llms.txt](https://flisk.sh/llms.txt): index of the TDK site, docs and reference landscapes
-- [tdk-cli-core](https://github.com/flisk-sh/flisk): the CLI source and `cli/README.md` command reference
+- [flisk](https://github.com/flisk-sh/flisk): the CLI source and `cli/README.md` command reference

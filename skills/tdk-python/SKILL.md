@@ -4,7 +4,7 @@ description: Scaffold and run Python backends with TDK. Use the dedicated Python
 license: MIT
 compatibility: Requires the tdk CLI. Does not deploy.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 
@@ -17,7 +17,7 @@ TDK supports Python runtimes alongside Bun/Node, Go, Rust, etc.
 1. Use the Python backend example or scaffold with the appropriate type/stack flags.
 2. Manage dependencies in the service's own files; TDK generates the local runtime layers.
 3. Run `tdk doctor` and `tdk up`.
-4. See examples/one-backend-python in tdk-cli-core.
+4. See examples/one-backend-python in flisk.
 
 ## Guardrails
 

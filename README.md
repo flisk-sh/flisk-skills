@@ -24,7 +24,7 @@ cp rules/AGENTS.landscape.md ./AGENTS.md                                        
 
 `install.sh` flags: `--agent claude|codex|opencode|cursor|agents`, `--global`, `--project` (default). It only creates symlinks (never copies markdown, never uses `sudo`).
 
-[Website](https://flisk.sh/) · [Agents guide](https://flisk.sh/docs/agents/) · [Quickstart](https://flisk.sh/docs/quickstart/) · [tdk-cli-core](https://github.com/flisk-sh/flisk) · [skills.sh](https://skills.sh/flisk-sh/tdk-skills) · [Report a bug](https://github.com/flisk-sh/tdk-skills/issues)
+[Website](https://flisk.sh/) · [Agents guide](https://flisk.sh/docs/agents/) · [Quickstart](https://flisk.sh/docs/quickstart/) · [flisk](https://github.com/flisk-sh/flisk) · [skills.sh](https://skills.sh/flisk-sh/tdk-skills) · [Report a bug](https://github.com/flisk-sh/tdk-skills/issues)
 
 If TDK Skills help your agents, a ⭐ on [this repo](https://github.com/flisk-sh/tdk-skills) helps other developers find them.
 
@@ -101,13 +101,13 @@ More skills are welcome — see [SPEC.md](SPEC.md) and open a PR.
 ## Repository guidance
 
 - [`rules/AGENTS.landscape.md`](rules/AGENTS.landscape.md) is a short baseline for TDK project, example and starter repositories.
-- [`rules/AGENTS.cli-core.md`](rules/AGENTS.cli-core.md) applies only to contributors working in `tdk-cli-core`.
+- [`rules/AGENTS.cli-core.md`](rules/AGENTS.cli-core.md) applies only to contributors working in `flisk`.
 
 Copy the applicable template into a repository as its root `AGENTS.md`, then add only rules specific to that repository.
 
 ## Updating skills
 
-Edit `skills/` only; the plugin and `.agents/skills/` are symlinks. Review a skill here first. Product-specific command behavior should be checked against [`tdk-cli-core`](https://github.com/flisk-sh/flisk) before publishing. Keep any mirror in the CLI repository synchronized from this source.
+Edit `skills/` only; the plugin and `.agents/skills/` are symlinks. Review a skill here first. Product-specific command behavior should be checked against [`flisk`](https://github.com/flisk-sh/flisk) before publishing. Keep any mirror in the CLI repository synchronized from this source.
 
 ## For agents and LLMs
 

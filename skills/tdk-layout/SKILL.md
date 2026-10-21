@@ -4,7 +4,7 @@ description: Organize TDK projects across one or more repositories, handle name 
 license: MIT
 compatibility: Requires the tdk CLI. Does not deploy.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 
@@ -18,7 +18,7 @@ One project or one per repo; services can live in other repositories.
 2. Use the documented patterns for 5, 20 and 50 services.
 3. Copy `rules/AGENTS.landscape.md` as the root AGENTS.md.
 4. Handle name clashes and ownership via CODEOWNERS if needed.
-5. See docs/layout.md in tdk-cli-core.
+5. See docs/layout.md in flisk.
 
 ## Guardrails
 

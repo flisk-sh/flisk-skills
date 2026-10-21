@@ -4,7 +4,7 @@ description: Deploy a TDK frontend or compatible service to Cloudflare (Pages or
 license: MIT
 compatibility: Requires a working local TDK stack first. Wrangler CLI recommended.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 

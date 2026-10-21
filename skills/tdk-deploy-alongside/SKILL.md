@@ -4,7 +4,7 @@ description: Use TDK for local development while keeping production deploy tools
 license: MIT
 compatibility: Requires the tdk CLI for local work. Does not replace production deploy.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 

@@ -4,13 +4,13 @@ description: Start from the official runnable examples (one-backend, Python, Hel
 license: MIT
 compatibility: Requires the tdk CLI. Does not deploy.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 
 # Runnable examples
 
-Use the examples in tdk-cli-core to see real patterns.
+Use the examples in flisk to see real patterns.
 
 ## Workflow
 

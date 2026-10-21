@@ -4,7 +4,7 @@ description: Deploy a TDK local stack to DigitalOcean (App Platform, Droplets, o
 license: MIT
 compatibility: Requires a working local TDK stack first. doctl or App Platform recommended.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 

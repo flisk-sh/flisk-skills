@@ -4,7 +4,7 @@ description: Use the interactive terminal UI (tdk ui) to inspect running stacks 
 license: MIT
 compatibility: Requires the tdk CLI and a running or inspectable project. Does not deploy.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 

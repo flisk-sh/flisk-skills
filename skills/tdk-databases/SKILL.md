@@ -4,7 +4,7 @@ description: Work with databases and tooling in TDK (Postgres, Prisma, Drizzle, 
 license: MIT
 compatibility: Requires the tdk CLI and Docker. Does not deploy.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 

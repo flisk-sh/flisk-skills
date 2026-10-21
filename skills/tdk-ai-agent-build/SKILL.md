@@ -4,7 +4,7 @@ description: Scaffold a complete local agent system (agent + MCP tools server + 
 license: MIT
 compatibility: Requires the tdk CLI, Docker and Tilt. Does not deploy.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 

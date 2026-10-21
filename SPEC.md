@@ -40,7 +40,7 @@ description: Diagnose a failed tdk up, Docker, or Tilt session. Use when tdk doc
 license: MIT
 compatibility: Requires tdk CLI, Docker, and Tilt on the local machine. Does not deploy.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 ```
@@ -80,7 +80,7 @@ curl -fsSL https://raw.githubusercontent.com/flisk-sh/tdk-skills/main/install.sh
 Flags: `--agent claude|codex|opencode|cursor|agents`, `--global`, `--project`.
 
 - Default is a project-local symlink into `.agents/skills/`, plus a symlink into the selected agent's directory.
-- Never vendor a second copy of the markdown. The only sanctioned copy is the generated mirror in `tdk-cli-core` (see Consumers).
+- Never vendor a second copy of the markdown. The only sanctioned copy is the generated mirror in `flisk` (see Consumers).
 - No `sudo`. If a target is not writable, fail fast and print the manual command.
 
 ## Instructions-only tools
@@ -112,7 +112,7 @@ Do not claim T3, Paseo, Hermes or Traycer load `SKILL.md` until that is checked.
 
 ## Consumers
 
-`tdk-cli-core` keeps a generated mirror of these skills in `.claude/skills/` and `.agents/skills/` so it builds without a sibling checkout. `scripts/sync-tdk-skills.sh` there reads `skills/` from this repo. Never edit the mirror; change the skill here and re-run the sync (the workflow is dispatch-only, so it is not triggered automatically).
+`flisk` keeps a generated mirror of these skills in `.claude/skills/` and `.agents/skills/` so it builds without a sibling checkout. `scripts/sync-tdk-skills.sh` there reads `skills/` from this repo. Never edit the mirror; change the skill here and re-run the sync (the workflow is dispatch-only, so it is not triggered automatically).
 
 ## Acceptance
 

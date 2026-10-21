@@ -4,7 +4,7 @@ description: Add bring-your-own (BYO) resources that are not scaffolded by the C
 license: MIT
 compatibility: Requires the tdk CLI. Does not deploy.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 
@@ -18,7 +18,7 @@ Integrate existing services via a service.json contract without full scaffolding
 2. Write a minimal `service.json` describing type, ports, health checks and dependencies.
 3. Place your Dockerfile or use an existing image.
 4. Run `tdk doctor` and `tdk up <stack>`.
-5. See docs/byo.md in tdk-cli-core for the supported patterns.
+5. See docs/byo.md in flisk for the supported patterns.
 
 ## Guardrails
 

@@ -4,7 +4,7 @@ description: "Manage local data for TDK stacks: reset, seed, snapshot and restor
 license: MIT
 compatibility: Requires the tdk CLI, Docker and a running or previously run stack. Does not deploy.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 
@@ -18,7 +18,7 @@ TDK runs Postgres locally. Manage its data without hand-editing volumes.
 2. For a clean start: stop the stack, remove the volume if needed, then `tdk up` again (data is re-initialized from service definitions or seed scripts).
 3. Use project-specific seed commands or scripts documented in the examples.
 4. Snapshot important volumes before destructive experiments.
-5. See docs/data.md in tdk-cli-core for reset, seed and snapshot patterns.
+5. See docs/data.md in flisk for reset, seed and snapshot patterns.
 
 ## Guardrails
 

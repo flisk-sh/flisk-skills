@@ -4,7 +4,7 @@ description: Scaffold and run AI agents, MCP tool servers, databases and queues 
 license: MIT
 compatibility: Requires the tdk CLI, Docker and Tilt. Does not deploy.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 
@@ -24,6 +24,6 @@ TDK is the local runtime for agent systems: agent + MCP tools + database + queue
 
 ## Guardrails
 
-- See the AI agents guide in tdk-cli-core docs.
+- See the AI agents guide in flisk docs.
 - Do not invent Kubernetes or external orchestrators; keep everything in the local Docker + Tilt stack.
 - Compare honestly with other agent frameworks via the documented comparison.

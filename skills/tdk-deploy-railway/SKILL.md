@@ -4,7 +4,7 @@ description: Deploy a TDK local stack to Railway. Complete separate skill for Ra
 license: MIT
 compatibility: Requires a working local TDK stack first. Railway CLI or Git integration recommended.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 

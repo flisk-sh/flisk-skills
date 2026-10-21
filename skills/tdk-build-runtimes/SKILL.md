@@ -4,7 +4,7 @@ description: Scaffold and run services across TDK's supported runtimes and frame
 license: MIT
 compatibility: Requires the tdk CLI. Does not deploy.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 

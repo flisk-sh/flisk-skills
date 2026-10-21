@@ -2,9 +2,9 @@
 name: tdk-benchmark
 description: Measure how many services fit on a machine, idle memory per service, start times and image sizes for TDK stacks. Use the verified scripts and methods from tdk-cli-core. Use when validating the north-star of 100 services on 16 GB or investigating performance.
 license: MIT
-compatibility: Requires the tdk CLI, Docker and the benchmark scripts in tdk-cli-core. Does not deploy.
+compatibility: Requires the tdk CLI, Docker and the benchmark scripts in flisk. Does not deploy.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 
@@ -14,7 +14,7 @@ Measure real metrics instead of guessing. Primary north-star: 100 services on a 
 
 ## Workflow
 
-1. Prefer the verified tools in tdk-cli-core: `scripts/benchmark/container-scale.ts` and `scripts/autoresearch/layer-eval.sh`.
+1. Prefer the verified tools in flisk: `scripts/benchmark/container-scale.ts` and `scripts/autoresearch/layer-eval.sh`.
 2. Measure idle memory via Docker VM meminfo, not only `docker stats` (which undercounts).
 3. Start containers in parallel when timing boot.
 4. Record primary metric `mem_per_service_mib`, image sizes, and health status.

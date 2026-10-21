@@ -4,7 +4,7 @@ description: Deploy a TDK local stack to AWS (ECS, EKS, App Runner, Lambda, or E
 license: MIT
 compatibility: Requires a working local TDK stack first. AWS credentials and CLI recommended.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 

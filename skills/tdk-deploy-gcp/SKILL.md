@@ -4,7 +4,7 @@ description: Deploy a TDK local stack to Google Cloud (Cloud Run, GKE, App Engin
 license: MIT
 compatibility: Requires a working local TDK stack first. gcloud CLI recommended.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 

@@ -4,7 +4,7 @@ description: Add "Review this PR in" Grok, Claude and Codex buttons to a GitHub 
 license: MIT
 compatibility: Requires a GitHub repository with GitHub Actions and Node.js 20+. Does not deploy and calls no AI API.
 metadata:
-  author: tdk-landscape
+  author: flisk-sh
   version: "1.0"
 ---
 
@@ -12,7 +12,7 @@ metadata:
 
 The buttons are plain Markdown links appended to the end of a PR description. Clicking one opens that AI's website with a prompt already typed in. Nothing runs in CI and no API key is needed. The whole feature is one Node script, one GitHub Actions workflow, and a marker string.
 
-Reference implementation: `tdk-cli-core` — `scripts/ai-review-buttons.mjs`, `.github/workflows/ai-review-buttons.yml`, `docs/contributing/04-review-a-pr.md`.
+Reference implementation: `flisk` — `scripts/ai-review-buttons.mjs`, `.github/workflows/ai-review-buttons.yml`, `docs/contributing/04-review-a-pr.md`.
 
 ## Screenshot
 
@@ -193,7 +193,7 @@ export function buildButtonsHtml(prUrl) {
 }
 
 export function buildGeneratedSection(prUrl) {
-  return [MARKER, "", "---", "", "# Review this PR in", buildButtonsHtml(prUrl), "", "<sub>Shared by [@tdk-landscape](https://github.com/flisk-sh) · [tdk-cli-core](https://github.com/flisk-sh/flisk) · If this helps, please ⭐ [star tdk-cli-core](https://github.com/flisk-sh/flisk)</sub>", ""].join("\n");
+  return [MARKER, "", "---", "", "# Review this PR in", buildButtonsHtml(prUrl), "", "<sub>Shared by [@tdk-landscape](https://github.com/flisk-sh) · [flisk](https://github.com/flisk-sh/flisk) · If this helps, please ⭐ [star flisk](https://github.com/flisk-sh/flisk)</sub>", ""].join("\n");
 }
 
 export function joinAuthorAndSection(authorBody, section) {
@@ -284,4 +284,4 @@ Any temp path works in place of `/tmp`. Run the script twice on the same input: 
 
 ## Telling people how to review with the buttons
 
-Point readers to the PR review guide in the repo (`docs/contributing/04-review-a-pr.md` in tdk-cli-core). The rule for every reviewer: click a button for a first pass, check each AI point against the diff, then write your own review and say what you did not check. The AI chat is private to the reviewer and does not post to GitHub.
+Point readers to the PR review guide in the repo (`docs/contributing/04-review-a-pr.md` in flisk). The rule for every reviewer: click a button for a first pass, check each AI point against the diff, then write your own review and say what you did not check. The AI chat is private to the reviewer and does not post to GitHub.
