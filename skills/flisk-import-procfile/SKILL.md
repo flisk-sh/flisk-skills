@@ -1,16 +1,16 @@
 ---
 name: flisk-import-procfile
-description: Turn Procfile processes into TDK bring-your-own resources. Use when a repo has a Procfile and you want the web, worker, or release processes to run under `tdk up`.
+description: Turn Procfile processes into Flisk bring-your-own resources. Use when a repo has a Procfile and you want the web, worker, or release processes to run under `flisk up`.
 license: MIT
-compatibility: Requires the tdk CLI. Does not deploy.
+compatibility: Requires the flisk CLI. Does not deploy.
 metadata:
   author: flisk-sh
   version: "1.0"
 ---
 
-# Import Procfile processes into TDK
+# Import Procfile processes into Flisk
 
-A Procfile lists process types and their start commands. TDK does not read Procfiles natively in the current `tdk import` (it reads root `docker-compose.yml`). Wrap each process as a BYO resource.
+A Procfile lists process types and their start commands. Flisk does not read Procfiles natively in the current `flisk import` (it reads root `docker-compose.yml`). Wrap each process as a BYO resource.
 
 ## Workflow
 
@@ -19,17 +19,17 @@ A Procfile lists process types and their start commands. TDK does not read Procf
 3. Add it as a BYO resource:
 
 ```bash
-tdk resource web --type bring-your-own --stack app \
+flisk resource web --type bring-your-own --stack app \
   --dockerfile ./Dockerfile --health-path /health \
   --path services/app/web --yes
 ```
 
 4. For a one-shot `release` or migration process, set `--restart no`.
-5. Run `tdk doctor` then `tdk up <stack>`.
+5. Run `flisk doctor` then `flisk up <stack>`.
 
 ## Guardrails
 
 - The container must read `PORT` and bind to `0.0.0.0`.
 - Put environment values in the project `.env`. Do not hard-code secrets in the Dockerfile.
-- Prefer the official scaffolders when the process is a standard backend or frontend that TDK can generate.
-- TDK is local only. The Procfile remains the source for production process management if you still use it.
+- Prefer the official scaffolders when the process is a standard backend or frontend that Flisk can generate.
+- Flisk is local only. The Procfile remains the source for production process management if you still use it.

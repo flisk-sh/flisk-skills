@@ -16,7 +16,7 @@ Use the contributor rules and keep the skills mirror in sync.
 
 1. Read `rules/AGENTS.cli-core.md` and copy it as the root AGENTS.md when working in core.
 2. Edit engine, CLI or generators; never hand-edit the generated skill mirrors.
-3. After changing skills in tdk-skills, run the sync script in flisk.
+3. After changing skills in flisk-skills, run the sync script in flisk.
 4. Run relevant tests (`tests/tilt-engine/`, e2e) before committing.
 5. See CONTRIBUTING.md and the operator runbook.
 

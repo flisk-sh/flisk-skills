@@ -1,6 +1,6 @@
-# TDK CLI core repository
+# Flisk CLI core repository
 
-This repository implements the TDK CLI, discovery system and Tilt engine. The user-facing CLI reference is `cli/README.md`; verify command behavior against the implementation before documenting or changing it.
+This repository implements the Flisk CLI, discovery system and Tilt engine. The user-facing CLI reference is `cli/README.md`; verify command behavior against the implementation before documenting or changing it.
 
 ## Working rules
 

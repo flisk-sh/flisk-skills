@@ -3,7 +3,7 @@
 # Never copies the markdown. Never uses sudo.
 set -eu
 
-REPO_URL="${TDK_SKILLS_REPO:-https://github.com/flisk-sh/flisk-skills.git}"
+REPO_URL="${FLISK_SKILLS_REPO:-https://github.com/flisk-sh/flisk-skills.git}"
 AGENT=""
 SCOPE="project"
 

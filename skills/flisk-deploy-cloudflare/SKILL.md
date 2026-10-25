@@ -1,8 +1,8 @@
 ---
 name: flisk-deploy-cloudflare
-description: Deploy a TDK frontend or compatible service to Cloudflare (Pages or Workers). Complete separate skill for Cloudflare. Use when the user wants to ship a TDK frontend to Cloudflare.
+description: Deploy a Flisk frontend or compatible service to Cloudflare (Pages or Workers). Complete separate skill for Cloudflare. Use when the user wants to ship a Flisk frontend to Cloudflare.
 license: MIT
-compatibility: Requires a working local TDK stack first. Wrangler CLI recommended.
+compatibility: Requires a working local Flisk stack first. Wrangler CLI recommended.
 metadata:
   author: flisk-sh
   version: "1.0"
@@ -10,11 +10,11 @@ metadata:
 
 # Deploy to Cloudflare
 
-TDK is local-only. This skill covers deploying compatible parts to Cloudflare.
+Flisk is local-only. This skill covers deploying compatible parts to Cloudflare.
 
 ## Workflow
 
-1. Confirm the frontend works locally with `tdk up`.
+1. Confirm the frontend works locally with `flisk up`.
 2. Identify the frontend service (Vite/React/Vue).
 3. Use Cloudflare Pages for static/Vite builds or Workers for edge functions.
 4. Set environment variables in the Cloudflare dashboard.
