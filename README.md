@@ -1,9 +1,11 @@
-# TDK Skills — portable Agent Skills for the TDK CLI
+<p align="center"><img src="assets/social-preview.png" alt="Flisk Skills: agent skills for the Flisk CLI" width="720"></p>
+
+# Flisk Skills — portable Agent Skills for the Flisk CLI
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-30+-blue)](skills)
 [![Agent Skills](https://img.shields.io/badge/spec-agentskills.io-green)](https://agentskills.io/specification)
-[![skills.sh](https://skills.sh/b/flisk-sh/flisk-skills)](https://skills.sh/flisk-sh/flisk-skills)
+[![skills.sh](https://skills.sh/b/flisk-sh/tdk-skills)](https://skills.sh/flisk-sh/flisk-skills)
 
 English | Skills for coding agents that drive the **local-only** TDK CLI.
 
