@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-30+-blue)](skills)
 [![Agent Skills](https://img.shields.io/badge/spec-agentskills.io-green)](https://agentskills.io/specification)
-[![skills.sh](https://skills.sh/b/flisk-sh/tdk-skills)](https://skills.sh/flisk-sh/tdk-skills)
+[![skills.sh](https://skills.sh/b/flisk-sh/flisk-skills)](https://skills.sh/flisk-sh/flisk-skills)
 
 English | Skills for coding agents that drive the **local-only** TDK CLI.
 
@@ -17,16 +17,16 @@ Coding agents are excellent at writing application logic and terrible at keeping
 
 ```bash
 curl -fsSL https://flisk.sh/install.sh | sh                                              # 1. CLI
-npx skills add flisk-sh/tdk-skills                                                                 # 2. skills
-curl -fsSL https://raw.githubusercontent.com/flisk-sh/tdk-skills/main/install.sh | sh -s -- --agent codex   # 2 (alt)
+npx skills add flisk-sh/flisk-skills                                                                 # 2. skills
+curl -fsSL https://raw.githubusercontent.com/flisk-sh/flisk-skills/main/install.sh | sh -s -- --agent codex   # 2 (alt)
 cp rules/AGENTS.landscape.md ./AGENTS.md                                                                # 3. rules template
 ```
 
 `install.sh` flags: `--agent claude|codex|opencode|cursor|agents`, `--global`, `--project` (default). It only creates symlinks (never copies markdown, never uses `sudo`).
 
-[Website](https://flisk.sh/) · [Agents guide](https://flisk.sh/docs/agents/) · [Quickstart](https://flisk.sh/docs/quickstart/) · [flisk](https://github.com/flisk-sh/flisk) · [skills.sh](https://skills.sh/flisk-sh/tdk-skills) · [Report a bug](https://github.com/flisk-sh/tdk-skills/issues)
+[Website](https://flisk.sh/) · [Agents guide](https://flisk.sh/docs/agents/) · [Quickstart](https://flisk.sh/docs/quickstart/) · [flisk](https://github.com/flisk-sh/flisk) · [skills.sh](https://skills.sh/flisk-sh/flisk-skills) · [Report a bug](https://github.com/flisk-sh/flisk-skills/issues)
 
-If TDK Skills help your agents, a ⭐ on [this repo](https://github.com/flisk-sh/tdk-skills) helps other developers find them.
+If TDK Skills help your agents, a ⭐ on [this repo](https://github.com/flisk-sh/flisk-skills) helps other developers find them.
 
 ## Why TDK Skills?
 
@@ -85,7 +85,7 @@ More skills are welcome — see [SPEC.md](SPEC.md) and open a PR.
 
 | Tool | Status |
 |---|---|
-| Claude Code | Documented path `.claude/skills/<name>/SKILL.md`: `install.sh --agent claude`. Optional plugin: `/plugin marketplace add flisk-sh/tdk-skills`, then `/plugin install tdk-cli@tdk-skills`. |
+| Claude Code | Documented path `.claude/skills/<name>/SKILL.md`: `install.sh --agent claude`. Optional plugin: `/plugin marketplace add flisk-sh/flisk-skills`, then `/plugin install tdk-cli@tdk-skills`. |
 | Codex | Documented path `.agents/skills/<name>/SKILL.md`: `install.sh --agent codex`. |
 | OpenCode | Documented paths `.agents/skills`, `.claude/skills`, `.opencode/skills`: `install.sh --agent opencode`. |
 | Cursor | Documented path `.cursor/skills/<name>/SKILL.md`: `install.sh --agent cursor`. |
@@ -96,7 +96,7 @@ More skills are welcome — see [SPEC.md](SPEC.md) and open a PR.
 | Traycer | Uses `AGENTS.md` only; skill auto-load unverified. |
 | Conductor-class tools | Uses `AGENTS.md` only; skill auto-load unverified. |
 
-`npx skills add flisk-sh/tdk-skills` installs into the shared `.agents/skills/` path used by several tools.
+`npx skills add flisk-sh/flisk-skills` installs into the shared `.agents/skills/` path used by several tools.
 
 ## Repository guidance
 
