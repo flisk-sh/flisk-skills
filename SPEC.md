@@ -1,4 +1,4 @@
-# Spec: portable TDK skills
+# Spec: portable Flisk skills
 
 Status: implemented (2026-10-04) · Package: `flisk-sh/flisk-skills`
 
@@ -6,11 +6,11 @@ Status: implemented (2026-10-04) · Package: `flisk-sh/flisk-skills`
 
 One maintained copy of each skill, installable into the directories that agent orchestrators already scan, with no Claude-only layout required.
 
-The tier list is a set of agent orchestrators, not TDK users. Most never look at `.claude-plugin`. They look for a folder containing a `SKILL.md`. So `tdk-skills` becomes a portable Agent Skills package, and the Claude plugin becomes an optional extra.
+The tier list is a set of agent orchestrators, not Flisk users. Most never look at `.claude-plugin`. They look for a folder containing a `SKILL.md`. So `flisk-skills` becomes a portable Agent Skills package, and the Claude plugin becomes an optional extra.
 
 ## Source of truth
 
-Skills move to the root of the `tdk-skills` repo. The plugin tree stops being canonical.
+Skills move to the root of the `flisk-skills` repo. The plugin tree stops being canonical.
 
 ```text
 skills/
@@ -24,7 +24,7 @@ AGENTS.md
 agent.yaml
 install.sh
 .claude-plugin/marketplace.json
-plugins/tdk-cli/skills -> ../../skills      (symlink)
+plugins/flisk-cli/skills -> ../../skills      (symlink)
 ```
 
 Each `SKILL.md` follows the [Agent Skills spec](https://agentskills.io/specification): YAML frontmatter, then markdown.
@@ -36,9 +36,9 @@ Each `SKILL.md` follows the [Agent Skills spec](https://agentskills.io/specifica
 ```yaml
 ---
 name: flisk-troubleshoot
-description: Diagnose a failed tdk up, Docker, or Tilt session. Use when tdk doctor fails, a service will not start, or localhost routing is broken.
+description: Diagnose a failed flisk up, Docker, or Tilt session. Use when flisk doctor fails, a service will not start, or localhost routing is broken.
 license: MIT
-compatibility: Requires tdk CLI, Docker, and Tilt on the local machine. Does not deploy.
+compatibility: Requires flisk CLI, Docker, and Tilt on the local machine. Does not deploy.
 metadata:
   author: flisk-sh
   version: "1.0"
@@ -88,14 +88,14 @@ Flags: `--agent claude|codex|opencode|cursor|agents`, `--global`, `--project`.
 Ship a short root `AGENTS.md` for tools that only read instructions, including Omnigent:
 
 ```yaml
-name: tdk-local
+name: flisk-local
 instructions: AGENTS.md
 ```
 
 `AGENTS.md` must say:
 
-- TDK is local only.
-- Run `tdk doctor`, then `tdk up`.
+- Flisk is local only.
+- Run `flisk doctor`, then `flisk up`.
 - Do not invent Kubernetes or Compose.
 - The three skills are `flisk-doctor`, `flisk-troubleshoot` and `layer-autoresearch`, with a pointer to each.
 
@@ -112,7 +112,7 @@ Do not claim T3, Paseo, Hermes or Traycer load `SKILL.md` until that is checked.
 
 ## Consumers
 
-`flisk` keeps a generated mirror of these skills in `.claude/skills/` and `.agents/skills/` so it builds without a sibling checkout. `scripts/sync-tdk-skills.sh` there reads `skills/` from this repo. Never edit the mirror; change the skill here and re-run the sync (the workflow is dispatch-only, so it is not triggered automatically).
+`flisk` keeps a generated mirror of these skills in `.claude/skills/` and `.agents/skills/` so it builds without a sibling checkout. `scripts/sync-flisk-skills.sh` there reads `skills/` from this repo. Never edit the mirror; change the skill here and re-run the sync (the workflow is dispatch-only, so it is not triggered automatically).
 
 ## Acceptance
 

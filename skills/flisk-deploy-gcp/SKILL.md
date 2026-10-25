@@ -1,8 +1,8 @@
 ---
 name: flisk-deploy-gcp
-description: Deploy a TDK local stack to Google Cloud (Cloud Run, GKE, App Engine, or Compute Engine). Complete separate skill for GCP. Use when the user wants to take a working tdk up stack to Google Cloud.
+description: Deploy a Flisk local stack to Google Cloud (Cloud Run, GKE, App Engine, or Compute Engine). Complete separate skill for GCP. Use when the user wants to take a working flisk up stack to Google Cloud.
 license: MIT
-compatibility: Requires a working local TDK stack first. gcloud CLI recommended.
+compatibility: Requires a working local Flisk stack first. gcloud CLI recommended.
 metadata:
   author: flisk-sh
   version: "1.0"
@@ -10,11 +10,11 @@ metadata:
 
 # Deploy to Google Cloud
 
-TDK is local-only. This skill covers taking a validated local stack to GCP.
+Flisk is local-only. This skill covers taking a validated local stack to GCP.
 
 ## Workflow
 
-1. Confirm the stack works locally: `tdk doctor && tdk up <stack>`.
+1. Confirm the stack works locally: `flisk doctor && flisk up <stack>`.
 2. Extract the contract from service.json.
 3. Preferred target: Cloud Run for containers, or GKE for more complex stacks.
 4. Build and push the production image to Artifact Registry.
