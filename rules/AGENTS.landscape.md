@@ -1,6 +1,6 @@
 # TDK landscape repository
 
-This repository is a TDK project, example or starter. Use the shared guidance at <https://github.com/flisk-sh/tdk-skills> when a task matches a published skill.
+This repository is a TDK project, example or starter. Use the shared guidance at <https://github.com/flisk-sh/flisk-skills> when a task matches a published skill.
 
 ## Working rules
 

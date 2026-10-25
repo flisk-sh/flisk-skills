@@ -16,7 +16,7 @@ Reference implementation: `flisk` — `scripts/ai-review-buttons.mjs`, `.github/
 
 ## Screenshot
 
-![Review this PR in buttons on a PR description](https://raw.githubusercontent.com/flisk-sh/tdk-skills/main/skills/tdk-pr-review-buttons/images/review-buttons.png)
+![Review this PR in buttons on a PR description](https://raw.githubusercontent.com/flisk-sh/flisk-skills/main/skills/tdk-pr-review-buttons/images/review-buttons.png)
 
 ## Install in a repository (do this when asked)
 
