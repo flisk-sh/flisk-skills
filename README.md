@@ -117,6 +117,10 @@ Edit `skills/` only; the plugin and `.agents/skills/` are symlinks. Review a ski
 
 See [SPEC.md](SPEC.md) for the design.
 
+## Emoji
+
+Using Flisk in Slack or Discord? Get the [Flisk green thunder emoji](https://github.com/flisk-sh/flisk-emoji) (SVG and PNG, MIT).
+
 ## License
 
 MIT; see [`LICENSE`](LICENSE).
