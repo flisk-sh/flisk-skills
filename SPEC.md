@@ -14,8 +14,8 @@ Skills move to the root of the `tdk-skills` repo. The plugin tree stops being ca
 
 ```text
 skills/
-  tdk-doctor/SKILL.md
-  tdk-troubleshoot/SKILL.md
+  flisk-doctor/SKILL.md
+  flisk-troubleshoot/SKILL.md
   layer-autoresearch/SKILL.md
 rules/
   AGENTS.landscape.md
@@ -35,7 +35,7 @@ Each `SKILL.md` follows the [Agent Skills spec](https://agentskills.io/specifica
 
 ```yaml
 ---
-name: tdk-troubleshoot
+name: flisk-troubleshoot
 description: Diagnose a failed tdk up, Docker, or Tilt session. Use when tdk doctor fails, a service will not start, or localhost routing is broken.
 license: MIT
 compatibility: Requires tdk CLI, Docker, and Tilt on the local machine. Does not deploy.
@@ -97,7 +97,7 @@ instructions: AGENTS.md
 - TDK is local only.
 - Run `tdk doctor`, then `tdk up`.
 - Do not invent Kubernetes or Compose.
-- The three skills are `tdk-doctor`, `tdk-troubleshoot` and `layer-autoresearch`, with a pointer to each.
+- The three skills are `flisk-doctor`, `flisk-troubleshoot` and `layer-autoresearch`, with a pointer to each.
 
 ## README
 
@@ -117,7 +117,7 @@ Do not claim T3, Paseo, Hermes or Traycer load `SKILL.md` until that is checked.
 ## Acceptance
 
 - A fresh clone has skills only under `skills/`. Each has valid frontmatter and a matching folder name.
-- OpenCode and Codex discover `tdk-doctor` from `.agents/skills` without the Claude plugin.
+- OpenCode and Codex discover `flisk-doctor` from `.agents/skills` without the Claude plugin.
 - Claude Code still installs via the marketplace, and that plugin is a symlink back to `skills/`.
 - `AGENTS.landscape.md` still tells project repos not to copy the whole catalog.
 - README install works for at least Claude, Codex, OpenCode and Cursor, and does not invent commands for the rest.

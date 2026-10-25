@@ -1,5 +1,5 @@
 #!/bin/sh
-# Install tdk-skills by symlinking skills/<name> into agent skill directories.
+# Install flisk-skills by symlinking skills/<name> into agent skill directories.
 # Never copies the markdown. Never uses sudo.
 set -eu
 
@@ -30,7 +30,7 @@ if [ -f "$0" ]; then SELF_DIR="$(cd "$(dirname "$0")" 2>/dev/null && pwd)" || SE
 if [ -n "$SELF_DIR" ] && [ -d "$SELF_DIR/skills" ]; then
   SRC="$SELF_DIR/skills"
 else
-  CACHE="${XDG_DATA_HOME:-$HOME/.local/share}/tdk-skills"
+  CACHE="${XDG_DATA_HOME:-$HOME/.local/share}/flisk-skills"
   if [ -d "$CACHE/.git" ]; then
     git -C "$CACHE" pull --ff-only --quiet || {
       echo "cannot update $CACHE (local changes or diverged history); remove it and re-run: rm -rf \"$CACHE\"" >&2
@@ -46,7 +46,7 @@ if [ "$SCOPE" = "global" ]; then BASE="$HOME"; else BASE="$(pwd)"; fi
 
 # Linking into the skills repo itself would rewrite its tracked symlinks.
 if [ "$BASE" = "$(dirname "$SRC")" ]; then
-  echo "refusing to install into the tdk-skills checkout itself; run from your project (or use --global)" >&2
+  echo "refusing to install into the flisk-skills checkout itself; run from your project (or use --global)" >&2
   exit 1
 fi
 
