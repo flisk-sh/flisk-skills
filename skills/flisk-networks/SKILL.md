@@ -16,7 +16,7 @@ metadata:
 
 1. Run `flisk networks` from the project root.
 2. Use the printed hostnames and paths (e.g. `http://api.shop.localhost/api/orders`).
-3. Combine with `tdk ui` for interactive inspection.
+3. Combine with `flisk ui` for interactive inspection.
 4. After changes to service.json, re-run to confirm new routes.
 
 ## Guardrails

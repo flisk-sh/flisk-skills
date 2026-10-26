@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-30+-blue)](skills)
 [![Agent Skills](https://img.shields.io/badge/spec-agentskills.io-green)](https://agentskills.io/specification)
-[![skills.sh](https://skills.sh/b/flisk-sh/tdk-skills)](https://skills.sh/flisk-sh/flisk-skills)
+[![skills.sh](https://skills.sh/b/flisk-sh/flisk-skills)](https://skills.sh/flisk-sh/flisk-skills)
 
 English | Skills for coding agents that drive the **local-only** Flisk CLI.
 
@@ -72,7 +72,7 @@ If Flisk Skills help your agents, a ⭐ on [this repo](https://github.com/flisk-
 | `flisk-frontend` | Frontend scaffolding and generated Vite/nginx configs. |
 | `flisk-python` | Python backend services. |
 | `flisk-build-runtimes` | Bun, Node, Python, Go, Rust, React, Vue, Svelte, Elysia, Fastify, NestJS. |
-| `flisk-ui` | Interactive terminal dashboard (`tdk ui`). |
+| `flisk-ui` | Interactive terminal dashboard (`flisk ui`). |
 | `flisk-dry-run` | Preview stacks with `flisk up --dry-run`. |
 | `flisk-examples` | Start from the official runnable examples. |
 | `flisk-service-json` | Edit and validate the service.json contract. |
@@ -87,7 +87,7 @@ More skills are welcome — see [SPEC.md](SPEC.md) and open a PR.
 
 | Tool | Status |
 |---|---|
-| Claude Code | Documented path `.claude/skills/<name>/SKILL.md`: `install.sh --agent claude`. Optional plugin: `/plugin marketplace add flisk-sh/flisk-skills`, then `/plugin install tdk-cli@tdk-skills`. |
+| Claude Code | Documented path `.claude/skills/<name>/SKILL.md`: `install.sh --agent claude`. Optional plugin: `/plugin marketplace add flisk-sh/flisk-skills`, then `/plugin install flisk-cli@flisk-skills`. |
 | Codex | Documented path `.agents/skills/<name>/SKILL.md`: `install.sh --agent codex`. |
 | OpenCode | Documented paths `.agents/skills`, `.claude/skills`, `.opencode/skills`: `install.sh --agent opencode`. |
 | Cursor | Documented path `.cursor/skills/<name>/SKILL.md`: `install.sh --agent cursor`. |

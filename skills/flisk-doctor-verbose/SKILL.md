@@ -15,7 +15,7 @@ Standard `flisk doctor` is the starting point. For deeper insight use verbose fl
 ## Workflow
 
 1. Run `flisk doctor` and capture the full output.
-2. If needed, set `TDK_DEBUG=1` and re-run with `--verbose` on related commands.
+2. If needed, set `FLISK_DEBUG=1` and re-run with `--verbose` on related commands.
 3. Distinguish host prerequisites (Docker, Tilt, Bun) from project config issues.
 4. Fix the named source (service.json, .env, missing assets) and re-check.
 5. See the detailed flisk-troubleshoot skill for measured failure modes.

@@ -25,5 +25,5 @@ Agents get durable checkpoint volumes, sticky `x-session-id` routing, graceful S
 ## Guardrails
 
 - See the AI agents guide and honest comparison with other frameworks.
-- Use `tdk mcp` so coding agents can drive the stack themselves.
+- Use `flisk mcp` so coding agents can drive the stack themselves.
 - Keep everything local; do not invent external orchestrators.

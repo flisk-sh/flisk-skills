@@ -1,6 +1,6 @@
 ---
 name: flisk-upgrade
-description: Upgrade the Flisk CLI, pin versions, and handle breaking changes or generated-file drift after an upgrade. Use when moving to a newer tdk version or when doctor reports version-related issues.
+description: Upgrade the Flisk CLI, pin versions, and handle breaking changes or generated-file drift after an upgrade. Use when moving to a newer flisk version or when doctor reports version-related issues.
 license: MIT
 compatibility: Requires the flisk CLI. Does not deploy.
 metadata:

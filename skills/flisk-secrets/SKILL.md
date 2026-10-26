@@ -22,5 +22,5 @@ Flisk projects use a project-level .env and service-specific generated env files
 ## Guardrails
 
 - Never commit real secrets or license keys.
-- .tdk/.project-id is local machine state; ensure it is gitignored.
+- .flisk/.project-id is local machine state; ensure it is gitignored.
 - Premium features that need a key are optional and documented separately.

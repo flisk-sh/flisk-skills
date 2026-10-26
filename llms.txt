@@ -37,7 +37,7 @@ Run `flisk doctor`, then `flisk up`, from the project root. One maintained copy 
 - [flisk-frontend](https://raw.githubusercontent.com/flisk-sh/flisk-skills/main/skills/flisk-frontend/SKILL.md): frontend scaffolding and generated Vite/nginx configs
 - [flisk-python](https://raw.githubusercontent.com/flisk-sh/flisk-skills/main/skills/flisk-python/SKILL.md): Python backend services
 - [flisk-build-runtimes](https://raw.githubusercontent.com/flisk-sh/flisk-skills/main/skills/flisk-build-runtimes/SKILL.md): Bun, Node, Python, Go, Rust, React, Vue, Svelte, Elysia, Fastify, NestJS
-- [flisk-ui](https://raw.githubusercontent.com/flisk-sh/flisk-skills/main/skills/flisk-ui/SKILL.md): interactive terminal dashboard (`tdk ui`)
+- [flisk-ui](https://raw.githubusercontent.com/flisk-sh/flisk-skills/main/skills/flisk-ui/SKILL.md): interactive terminal dashboard (`flisk ui`)
 - [flisk-dry-run](https://raw.githubusercontent.com/flisk-sh/flisk-skills/main/skills/flisk-dry-run/SKILL.md): preview stacks with `flisk up --dry-run`
 - [flisk-examples](https://raw.githubusercontent.com/flisk-sh/flisk-skills/main/skills/flisk-examples/SKILL.md): start from the official runnable examples
 - [flisk-service-json](https://raw.githubusercontent.com/flisk-sh/flisk-skills/main/skills/flisk-service-json/SKILL.md): edit and validate the service.json contract

@@ -1,6 +1,6 @@
 ---
 name: flisk-agents
-description: Scaffold and run AI agents, MCP tool servers, databases and queues in one local stack with tdk. Use when building agent systems that need durable checkpoints, sticky sessions, health checks and a single gateway.
+description: Scaffold and run AI agents, MCP tool servers, databases and queues in one local stack with flisk. Use when building agent systems that need durable checkpoints, sticky sessions, health checks and a single gateway.
 license: MIT
 compatibility: Requires the flisk CLI, Docker and Tilt. Does not deploy.
 metadata:

@@ -15,7 +15,7 @@ Use the examples in flisk to see real patterns.
 ## Workflow
 
 1. `flisk project example` fetches a working example.
-2. Or clone specific ones: one-backend, one-backend-python, one-backend-helm, byo, tdk-example.
+2. Or clone specific ones: one-backend, one-backend-python, one-backend-helm, byo, flisk-example.
 3. `cd` into it, run `flisk doctor` then `flisk up`.
 4. Study the service.json and generated files.
 

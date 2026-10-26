@@ -36,5 +36,5 @@ Every imported service is `appType: "bring-your-own"`. Database and broker ports
 - Reads only the root `docker-compose.yml`. Does not read `compose.yaml`, overrides, or nested files.
 - Drops: volumes, command, entrypoint, env_file, networks, restart, profiles, extends, out-of-tree builds, and images with `${VAR}`.
 - Never edits the Compose file. Never overwrites an existing `service.json` without `--force`.
-- Does not start anything. Requires Flisk core 1.3.145 or later for a project that has `.tdk/project.json` but no Tiltfile yet.
+- Does not start anything. Requires Flisk core 1.3.145 or later for a project that has `.flisk/project.json` but no Tiltfile yet.
 - Put secrets in `.env`, not in the plan output.

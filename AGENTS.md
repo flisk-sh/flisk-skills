@@ -35,7 +35,7 @@ Each skill is a folder under `skills/` with a `SKILL.md`:
 - `skills/flisk-frontend/SKILL.md`: frontend scaffolding and generated Vite/nginx configs.
 - `skills/flisk-python/SKILL.md`: Python backend services.
 - `skills/flisk-build-runtimes/SKILL.md`: Bun, Node, Python, Go, Rust, React, Vue, Svelte, Elysia, Fastify, NestJS.
-- `skills/flisk-ui/SKILL.md`: interactive terminal dashboard (`tdk ui`).
+- `skills/flisk-ui/SKILL.md`: interactive terminal dashboard (`flisk ui`).
 - `skills/flisk-dry-run/SKILL.md`: preview stacks with `flisk up --dry-run`.
 - `skills/flisk-examples/SKILL.md`: start from the official runnable examples.
 - `skills/flisk-service-json/SKILL.md`: edit and validate the service.json contract.
