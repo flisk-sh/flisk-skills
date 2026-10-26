@@ -2,7 +2,7 @@
 name: flisk-ai-agent-build
 description: Scaffold a complete local agent system (agent + MCP tools server + database + queue) in one stack. Use when building AI agent applications next to services.
 license: MIT
-compatibility: Requires the tdk CLI, Docker and Tilt. Does not deploy.
+compatibility: Requires the flisk CLI, Docker and Tilt. Does not deploy.
 metadata:
   author: flisk-sh
   version: "1.0"
@@ -10,14 +10,14 @@ metadata:
 
 # Build AI agent systems
 
-TDK is the local runtime for agent systems behind one gateway.
+Flisk is the local runtime for agent systems behind one gateway.
 
 ## Workflow
 
 ```bash
-tdk resource bot --type agent --stack shop --yes
-tdk resource tools-mcp --type mcp --stack shop --yes
-tdk up shop
+flisk resource bot --type agent --stack shop --yes
+flisk resource tools-mcp --type mcp --stack shop --yes
+flisk up shop
 ```
 
 Agents get durable checkpoint volumes, sticky `x-session-id` routing, graceful SIGTERM drain, `/health` and `/ready`.

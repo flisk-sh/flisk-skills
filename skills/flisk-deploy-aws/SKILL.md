@@ -1,8 +1,8 @@
 ---
 name: flisk-deploy-aws
-description: Deploy a TDK local stack to AWS (ECS, EKS, App Runner, Lambda, or EC2). Complete separate skill for AWS production deploy. Use when the user wants to take a working tdk up stack to AWS.
+description: Deploy a Flisk local stack to AWS (ECS, EKS, App Runner, Lambda, or EC2). Complete separate skill for AWS production deploy. Use when the user wants to take a working flisk up stack to AWS.
 license: MIT
-compatibility: Requires a working local TDK stack first. AWS credentials and CLI recommended.
+compatibility: Requires a working local Flisk stack first. AWS credentials and CLI recommended.
 metadata:
   author: flisk-sh
   version: "1.0"
@@ -10,11 +10,11 @@ metadata:
 
 # Deploy to AWS
 
-TDK is local-only. This skill covers taking a validated local stack to AWS.
+Flisk is local-only. This skill covers taking a validated local stack to AWS.
 
 ## Workflow
 
-1. Confirm the stack works locally: `tdk doctor && tdk up <stack>`.
+1. Confirm the stack works locally: `flisk doctor && flisk up <stack>`.
 2. Extract the contract from `service.json` files (ports, dependencies, health checks, env).
 3. Choose the AWS target:
    - ECS/Fargate or EKS for container services

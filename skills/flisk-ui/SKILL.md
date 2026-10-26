@@ -2,7 +2,7 @@
 name: flisk-ui
 description: Use the interactive terminal UI (tdk ui) to inspect running stacks and resources. Keyboard navigation, search and tabs.
 license: MIT
-compatibility: Requires the tdk CLI and a running or inspectable project. Does not deploy.
+compatibility: Requires the flisk CLI and a running or inspectable project. Does not deploy.
 metadata:
   author: flisk-sh
   version: "1.0"
@@ -21,4 +21,4 @@ metadata:
 ## Guardrails
 
 - The UI is for inspection; changes still go through service.json and the CLI.
-- Works alongside normal `tdk up` sessions.
+- Works alongside normal `flisk up` sessions.

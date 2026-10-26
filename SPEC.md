@@ -1,4 +1,4 @@
-# Spec: portable TDK skills
+# Spec: portable Flisk skills
 
 Status: implemented (2026-10-04) · Package: `flisk-sh/flisk-skills`
 
@@ -6,7 +6,7 @@ Status: implemented (2026-10-04) · Package: `flisk-sh/flisk-skills`
 
 One maintained copy of each skill, installable into the directories that agent orchestrators already scan, with no Claude-only layout required.
 
-The tier list is a set of agent orchestrators, not TDK users. Most never look at `.claude-plugin`. They look for a folder containing a `SKILL.md`. So `tdk-skills` becomes a portable Agent Skills package, and the Claude plugin becomes an optional extra.
+The tier list is a set of agent orchestrators, not Flisk users. Most never look at `.claude-plugin`. They look for a folder containing a `SKILL.md`. So `tdk-skills` becomes a portable Agent Skills package, and the Claude plugin becomes an optional extra.
 
 ## Source of truth
 
@@ -36,9 +36,9 @@ Each `SKILL.md` follows the [Agent Skills spec](https://agentskills.io/specifica
 ```yaml
 ---
 name: flisk-troubleshoot
-description: Diagnose a failed tdk up, Docker, or Tilt session. Use when tdk doctor fails, a service will not start, or localhost routing is broken.
+description: Diagnose a failed flisk up, Docker, or Tilt session. Use when flisk doctor fails, a service will not start, or localhost routing is broken.
 license: MIT
-compatibility: Requires tdk CLI, Docker, and Tilt on the local machine. Does not deploy.
+compatibility: Requires flisk CLI, Docker, and Tilt on the local machine. Does not deploy.
 metadata:
   author: flisk-sh
   version: "1.0"
@@ -94,8 +94,8 @@ instructions: AGENTS.md
 
 `AGENTS.md` must say:
 
-- TDK is local only.
-- Run `tdk doctor`, then `tdk up`.
+- Flisk is local only.
+- Run `flisk doctor`, then `flisk up`.
 - Do not invent Kubernetes or Compose.
 - The three skills are `flisk-doctor`, `flisk-troubleshoot` and `layer-autoresearch`, with a pointer to each.
 

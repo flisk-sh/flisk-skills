@@ -1,8 +1,8 @@
 ---
 name: flisk-byo
-description: Add bring-your-own (BYO) resources that are not scaffolded by the CLI, or integrate existing services into a TDK stack. Use when you already have a Dockerfile or service and want it managed by tdk up.
+description: Add bring-your-own (BYO) resources that are not scaffolded by the CLI, or integrate existing services into a Flisk stack. Use when you already have a Dockerfile or service and want it managed by flisk up.
 license: MIT
-compatibility: Requires the tdk CLI. Does not deploy.
+compatibility: Requires the flisk CLI. Does not deploy.
 metadata:
   author: flisk-sh
   version: "1.0"
@@ -17,7 +17,7 @@ Integrate existing services via a service.json contract without full scaffolding
 1. Create a directory under `services/<stack>/<name>/`.
 2. Write a minimal `service.json` describing type, ports, health checks and dependencies.
 3. Place your Dockerfile or use an existing image.
-4. Run `tdk doctor` and `tdk up <stack>`.
+4. Run `flisk doctor` and `flisk up <stack>`.
 5. See docs/byo.md in flisk for the supported patterns.
 
 ## Guardrails

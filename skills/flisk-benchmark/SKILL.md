@@ -1,14 +1,14 @@
 ---
 name: flisk-benchmark
-description: Measure how many services fit on a machine, idle memory per service, start times and image sizes for TDK stacks. Use the verified scripts and methods from flisk. Use when validating the north-star of 100 services on 16 GB or investigating performance.
+description: Measure how many services fit on a machine, idle memory per service, start times and image sizes for Flisk stacks. Use the verified scripts and methods from flisk. Use when validating the north-star of 100 services on 16 GB or investigating performance.
 license: MIT
-compatibility: Requires the tdk CLI, Docker and the benchmark scripts in flisk. Does not deploy.
+compatibility: Requires the flisk CLI, Docker and the benchmark scripts in flisk. Does not deploy.
 metadata:
   author: flisk-sh
   version: "1.0"
 ---
 
-# Benchmark TDK scale and footprint
+# Benchmark Flisk scale and footprint
 
 Measure real metrics instead of guessing. Primary north-star: 100 services on a 16 GB machine.
 
