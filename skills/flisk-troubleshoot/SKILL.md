@@ -60,13 +60,19 @@ docker inspect <project>_postgres --format '{{range .Config.Env}}{{println .}}{{
 
 ### Tilt build error `pull access denied ... docker.io/library/<project>-l4-backend:latest`
 
-**Cause:** the golden layers aren't built yet (the `golden-layers-build` resource is still running).
+The golden image (the `l3-frontend` or `l4-backend` named in the error) is missing locally. There are two causes. To check whether the image exists, run `docker image inspect <project>-l4-backend:latest`.
+
+**Cause 1:** `golden-layers-build` is still running.
 
 **Fix:** wait for it to finish. Tilt does **not** retry resources that failed before it finished, so trigger every errored resource yourself.
 
 ```bash
 tilt get uiresources -o json | python3 -c 'import json,sys; [print(i["metadata"]["name"]) for i in json.load(sys.stdin)["items"] if i.get("status",{}).get("updateStatus")=="error"]' | xargs -n1 tilt trigger
 ```
+
+**Cause 2:** `golden-layers-build` shows ready, but the image is still missing. A golden target failed to build, for example after a transient `apk add` mirror error such as `SSL routines::unexpected eof`. Older Flisk versions did not check the bake's exit status, so they still printed "✅ Golden layers built" and reported success. To confirm, look in its log (`tilt logs golden-layers-build`) for an `ERROR: target ...: failed to solve` line above that success message.
+
+**Fix:** run `tilt trigger golden-layers-build` (it rebuilds because the image is missing; `FLISK_GOLDEN_REBUILD=1 flisk up` forces a full rebuild), then trigger the errored resources with the command above. On newer Flisk versions the build retries the bake up to 3 times. If every attempt fails, the resource turns red and logs "Golden layers build failed after 3 attempts".
 
 ### `*-run-only` resources fail with `No such image: <stack>_<svc>:dev`
 
