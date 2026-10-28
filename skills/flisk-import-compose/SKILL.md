@@ -1,6 +1,6 @@
 ---
 name: flisk-import-compose
-description: Import an existing Docker Compose project into Flisk using `flisk import`. Use when a repo has a root docker-compose.yml and you want the services to run under `flisk up` as bring-your-own resources.
+description: Import an existing Docker Compose project into Flisk with `flisk import .` - it reads the root docker-compose.yml and writes one bring-your-own service.json per Compose service (build, image, one port, healthcheck URL and depends_on carry over; volumes, command, env_file and networks are dropped). Use when a repo has a root docker-compose.yml and the user wants it under `flisk up`. For a single Dockerfile or image use flisk-byo; for a Procfile use flisk-import-procfile.
 license: MIT
 compatibility: Requires the flisk CLI 1.3.145 or later. Does not deploy. Does not start containers.
 metadata:
