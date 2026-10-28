@@ -1,6 +1,6 @@
 ---
 name: flisk-import-procfile
-description: Turn Procfile processes into Flisk bring-your-own resources. Use when a repo has a Procfile and you want the web, worker, or release processes to run under `flisk up`.
+description: Turn the processes of a Procfile (web, worker, release) into Flisk bring-your-own resources, one small Dockerfile per process plus `flisk resource --type bring-your-own` (with `--restart no` for one-shot release tasks). Use when a repo has a Procfile (Heroku-style) and the user wants those processes under `flisk up`; `flisk import` does not read Procfiles. For a docker-compose.yml use flisk-import-compose; for any other Dockerfile or image use flisk-byo.
 license: MIT
 compatibility: Requires the flisk CLI. Does not deploy.
 metadata:
