@@ -47,6 +47,8 @@ If Flisk Skills help your agents, a ⭐ on [this repo](https://github.com/flisk-
 | `flisk-build-runtimes` | Pick the language or framework of a new service (Bun, Python, Go, Rust, Node; React, Vue, Next.js and more). |
 | `flisk-frontend` | Add a web app to a stack and work with its generated nginx, Vite and API client files. |
 | `flisk-agents` | Build and operate AI agent resources: the session contract, checkpoints and `flisk agent sessions`. |
+| `flisk-demo-bubbles` | Hand out a personalised demo.flisk.sh stack for a person: link, JSON API or the `make_demo` MCP tool. |
+| `flisk-unfollowers` | Who unfollowed an X account in a 10m, 1h or 1d window, from stored follower lists (`get_unfollowers` MCP tool). |
 | `flisk-byo` | Bring an existing Dockerfile, image or one-shot job into a stack as a bring-your-own resource. |
 | `flisk-import-compose` | Import a root `docker-compose.yml` with `flisk import`. |
 | `flisk-import-procfile` | Turn Procfile processes into bring-your-own resources. |

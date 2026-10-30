@@ -41,6 +41,8 @@ Each skill is a folder under `skills/` with a `SKILL.md`:
 - `skills/flisk-deploy-railway/SKILL.md`: ship a working stack to Railway.
 - `skills/flisk-deploy-render/SKILL.md`: ship a working stack to Render.
 - `skills/flisk-contributing/SKILL.md`: contribute to the flisk CLI repository itself.
+- `skills/flisk-demo-bubbles/SKILL.md`: hand out a personalised demo.flisk.sh stack for a person ("Grok bubbles"): link, JSON API or the `make_demo` MCP tool.
+- `skills/flisk-unfollowers/SKILL.md`: who unfollowed an X account in a 10m / 1h / 1d window, from stored follower lists (`get_unfollowers` MCP tool).
 - `skills/layer-autoresearch/SKILL.md`: contributor experiment loop that optimises the L1-L4 Docker layers (keep/discard).
 
 If your tool does not load skills automatically, read the relevant `SKILL.md` directly.
