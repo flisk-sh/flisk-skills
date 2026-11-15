@@ -19,3 +19,7 @@ jobs:
         run: node --test scripts/validate-skills.test.mjs
       - name: Validate skills
         run: node scripts/validate-skills.mjs
+      - name: Test README link checking
+        run: node --test scripts/check-readme-links.test.mjs
+      - name: Check README links
+        run: node scripts/check-readme-links.mjs
