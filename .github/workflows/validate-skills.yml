@@ -23,3 +23,7 @@ jobs:
         run: node --test scripts/check-readme-links.test.mjs
       - name: Check README links
         run: node scripts/check-readme-links.mjs
+      - name: Test demo host check
+        run: node --test scripts/check-demo-host.test.mjs
+      - name: Check demo host references
+        run: node scripts/check-demo-host.mjs
