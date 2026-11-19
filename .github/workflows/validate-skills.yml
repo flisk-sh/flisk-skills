@@ -23,3 +23,7 @@ jobs:
         run: node --test scripts/check-readme-links.test.mjs
       - name: Check README links
         run: node scripts/check-readme-links.mjs
+      - name: Test llms.txt skill index
+        run: node --test scripts/check-llms-skills.test.mjs
+      - name: Check every skill is in llms.txt
+        run: node scripts/check-llms-skills.mjs
