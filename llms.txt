@@ -1,6 +1,6 @@
 # Flisk Skills
 
-> Portable Agent Skills (`SKILL.md`) and `AGENTS.md` rule templates for working with the Flisk CLI: a local-only, Docker + Tilt development tool. Not a deployment tool; do not invent Kubernetes or Docker Compose for Flisk projects.
+> Portable Agent Skills (`SKILL.md`) and `AGENTS.md` rule templates for working with the Flisk CLI: a local-only development tool: plain processes with `--local` (no Docker), or Docker + Tilt for container stacks. Not a deployment tool; do not invent Kubernetes or Docker Compose for Flisk projects.
 
 Run `flisk doctor`, then `flisk up`, from the project root. One maintained copy of each skill lives under `skills/`; the Claude plugin and `.agents/skills/` are symlinks to it.
 
@@ -12,7 +12,7 @@ Run `flisk doctor`, then `flisk up`, from the project root. One maintained copy 
 - [flisk-build-runtimes](https://raw.githubusercontent.com/flisk-sh/flisk-skills/main/skills/flisk-build-runtimes/SKILL.md): pick the language or framework of a new service (Bun, Python, Go, Rust, Node; React, Vue, Next.js and more)
 - [flisk-frontend](https://raw.githubusercontent.com/flisk-sh/flisk-skills/main/skills/flisk-frontend/SKILL.md): add a web app to a stack and work with its generated nginx, Vite and API client files
 - [flisk-agents](https://raw.githubusercontent.com/flisk-sh/flisk-skills/main/skills/flisk-agents/SKILL.md): build and operate AI agent resources: the session contract, checkpoints and `flisk agent sessions`
-- [flisk-demo-bubbles](https://raw.githubusercontent.com/flisk-sh/flisk-skills/main/skills/flisk-demo-bubbles/SKILL.md): hand out a personalised demo.flisk.sh stack for a person (link, JSON API or the `make_demo` MCP tool)
+- [flisk-demo-bubbles](https://raw.githubusercontent.com/flisk-sh/flisk-skills/main/skills/flisk-demo-bubbles/SKILL.md): hand out a personalised demo.flisk.si stack for a person (link, JSON API or the `make_demo` MCP tool)
 - [flisk-unfollowers](https://raw.githubusercontent.com/flisk-sh/flisk-skills/main/skills/flisk-unfollowers/SKILL.md): who unfollowed an X account in a 10m, 1h or 1d window (`get_unfollowers` MCP tool)
 - [flisk-byo](https://raw.githubusercontent.com/flisk-sh/flisk-skills/main/skills/flisk-byo/SKILL.md): bring an existing Dockerfile, image or one-shot job into a stack as a bring-your-own resource
 - [flisk-import-compose](https://raw.githubusercontent.com/flisk-sh/flisk-skills/main/skills/flisk-import-compose/SKILL.md): import a root `docker-compose.yml` with `flisk import`

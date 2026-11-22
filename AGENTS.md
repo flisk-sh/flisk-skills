@@ -1,6 +1,7 @@
 # Flisk (local development)
 
-- Flisk is local only. It runs a Docker + Tilt inner loop and does not deploy.
+- Flisk is local only and does not deploy. Services with a `command` (made with `flisk resource ... --local`) run as plain processes with no Docker; container stacks run on Docker + Tilt.
+- `flisk` is the npm package `@flisk-sh/flisk`. In a sandbox with no Docker (Bolt, StackBlitz, Lovable, v0), use `--local`, do not probe for Docker or Tilt, do not install anything globally and do not search the web.
 - Run `flisk doctor`, then `flisk up`, from the project root.
 - Do not invent Kubernetes manifests or Docker Compose files.
 
@@ -41,7 +42,7 @@ Each skill is a folder under `skills/` with a `SKILL.md`:
 - `skills/flisk-deploy-railway/SKILL.md`: ship a working stack to Railway.
 - `skills/flisk-deploy-render/SKILL.md`: ship a working stack to Render.
 - `skills/flisk-contributing/SKILL.md`: contribute to the flisk CLI repository itself.
-- `skills/flisk-demo-bubbles/SKILL.md`: hand out a personalised demo.flisk.sh stack for a person ("Grok bubbles"): link, JSON API or the `make_demo` MCP tool.
+- `skills/flisk-demo-bubbles/SKILL.md`: hand out a personalised demo.flisk.si stack for a person ("Grok bubbles"): link, JSON API or the `make_demo` MCP tool.
 - `skills/flisk-unfollowers/SKILL.md`: who unfollowed an X account in a 10m / 1h / 1d window, from stored follower lists (`get_unfollowers` MCP tool).
 - `skills/layer-autoresearch/SKILL.md`: contributor experiment loop that optimises the L1-L4 Docker layers (keep/discard).
 

@@ -1,8 +1,8 @@
 ---
 name: flisk-unfollowers
-description: Find out who unfollowed an X account in a window (10 minutes, 1 hour, 1 day) with the demo.flisk.sh unfollowers API or the get_unfollowers MCP tool, and send follower lists to build the history. Use when asked who unfollowed someone, or to track follower changes. X keeps no unfollow history, so this only knows what lists it was given.
+description: Find out who unfollowed an X account in a window (10 minutes, 1 hour, 1 day) with the demo.flisk.si unfollowers API or the get_unfollowers MCP tool, and send follower lists to build the history. Use when asked who unfollowed someone, or to track follower changes. X keeps no unfollow history, so this only knows what lists it was given.
 license: MIT
-compatibility: Needs network access to https://demo.flisk.sh. No X API key is needed to read; sending lists needs the Worker's callback token.
+compatibility: Needs network access to https://demo.flisk.si. No X API key is needed to read; sending lists needs the Worker's callback token.
 metadata:
   author: flisk-sh
   version: "1.0"
@@ -15,8 +15,8 @@ starts after the second list and never reaches back before the first.
 
 ## Workflow
 
-1. Ask: `GET https://demo.flisk.sh/v1/unfollowers?user=<handle>&window=10m` (`10m`, `1h`, `1d`; longest 48h), or the MCP tool
-   `get_unfollowers` (`user`, `window`) at `https://demo.flisk.sh/mcp`.
+1. Ask: `GET https://demo.flisk.si/v1/unfollowers?user=<handle>&window=10m` (`10m`, `1h`, `1d`; longest 48h), or the MCP tool
+   `get_unfollowers` (`user`, `window`) at `https://demo.flisk.si/mcp`.
 2. Read `status`:
    - `tracking_started`: only one list exists. Nobody can be listed yet. Say so and ask again after a window.
    - `ok`: a list at least one window old was compared with the newest. `unfollowers` names the people who left; `gained` counts new followers.

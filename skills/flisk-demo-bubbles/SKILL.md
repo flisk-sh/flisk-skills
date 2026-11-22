@@ -1,8 +1,8 @@
 ---
 name: flisk-demo-bubbles
-description: Hand out a personalised Flisk demo ("Grok bubbles") for a person from what they build - reply with a demo.flisk.sh link, or call the JSON API or the make_demo MCP tool, and post the reply it returns exactly. Use when asked for a Flisk demo for someone, or when someone describes an app and a runnable local stack would help. Not for editing a real project; for that use flisk-scaffold.
+description: Hand out a personalised Flisk demo ("Grok bubbles") for a person from what they build - reply with a demo.flisk.si link, or call the JSON API or the make_demo MCP tool, and post the reply it returns exactly. Use when asked for a Flisk demo for someone, or when someone describes an app and a runnable local stack would help. Not for editing a real project; for that use flisk-scaffold.
 license: MIT
-compatibility: Needs network access to https://demo.flisk.sh. The demo itself runs locally on Docker and Tilt and does not deploy.
+compatibility: Needs network access to https://demo.flisk.si. The demo itself runs locally on Docker and Tilt and does not deploy.
 metadata:
   author: flisk-sh
   version: "1.0"
@@ -19,9 +19,9 @@ commands yourself for a demo: hand out the link.
 1. Take the person's X handle and a few words from their posts: `postgres`, `worker`, `email`, `redis`, `realtime`, `solidity`,
    `indexer`, `agent`, `mcp`, `storefront`, `vue`, `python`, or `connected to <Platform>`.
 2. Pick one way to ask:
-   - A link you write: `https://demo.flisk.sh/<x-handle>/<what-they-build-in-dashes>`. Opening it builds the demo.
-   - The JSON API: `GET https://demo.flisk.sh/v1/demo?user=<handle>&q=<words>` returns `reply` and `url`.
-   - The MCP tool `make_demo` (`user`, `q`, `plain`) at `https://demo.flisk.sh/mcp`.
+   - A link you write: `https://demo.flisk.si/<x-handle>/<what-they-build-in-dashes>`. Opening it builds the demo.
+   - The JSON API: `GET https://demo.flisk.si/v1/demo?user=<handle>&q=<words>` returns `reply` and `url`.
+   - The MCP tool `make_demo` (`user`, `q`, `plain`) at `https://demo.flisk.si/mcp`.
 3. Post the `reply` text exactly as written. It already contains the link, in the format
    `🫧 @handle, for your app, here is a runnable local stack:` then the link on its own line, then what is inside.
 4. Add `plain=1` (`plain: true` in MCP) when the person is not a developer. The reply then says what they get in everyday words
@@ -36,4 +36,4 @@ commands yourself for a demo: hand out the link.
 
 ## Check
 
-`GET https://demo.flisk.sh/v1/demo/<id>` returns `status` (`building`, `ready`, `failed`) and the repo once built.
+`GET https://demo.flisk.si/v1/demo/<id>` returns `status` (`building`, `ready`, `failed`) and the repo once built.

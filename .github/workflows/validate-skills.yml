@@ -27,3 +27,7 @@ jobs:
         run: node --test scripts/check-llms-skills.test.mjs
       - name: Check every skill is in llms.txt
         run: node scripts/check-llms-skills.mjs
+      - name: Test demo host check
+        run: node --test scripts/check-demo-host.test.mjs
+      - name: Check demo host references
+        run: node scripts/check-demo-host.mjs
