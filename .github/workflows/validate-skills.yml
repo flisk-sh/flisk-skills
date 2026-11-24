@@ -15,6 +15,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Test installer argument handling
+        run: node --test scripts/install.test.mjs
       - name: Test skill validation
         run: node --test scripts/validate-skills.test.mjs
       - name: Validate skills

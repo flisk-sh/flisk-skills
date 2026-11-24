@@ -8,21 +8,25 @@ AGENT=""
 SCOPE="project"
 
 usage() {
-  echo "usage: install.sh [--agent claude|codex|opencode|cursor|agents] [--global|--project]" >&2
+  echo "usage: install.sh [--agent claude|codex|opencode|cursor|agents] [--global|--project]"
+}
+
+usage_error() {
+  usage >&2
   exit 2
 }
 
 while [ $# -gt 0 ]; do
   case "$1" in
-    --agent) [ $# -ge 2 ] || usage; AGENT="$2"; shift 2 ;;
+    --agent) [ $# -ge 2 ] || usage_error; AGENT="$2"; shift 2 ;;
     --global) SCOPE="global"; shift ;;
     --project) SCOPE="project"; shift ;;
-    -h|--help) usage ;;
-    *) usage ;;
+    -h|--help) usage; exit 0 ;;
+    *) usage_error ;;
   esac
 done
 
-case "$AGENT" in ""|claude|codex|opencode|cursor|agents) ;; *) usage ;; esac
+case "$AGENT" in ""|claude|codex|opencode|cursor|agents) ;; *) usage_error ;; esac
 
 # Source: this checkout if run from one, otherwise a cached clone.
 SELF_DIR=""
