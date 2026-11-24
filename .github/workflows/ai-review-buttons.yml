@@ -37,7 +37,7 @@ jobs:
           gh api "repos/${GITHUB_REPOSITORY}/pulls/${PR_NUMBER}" --jq '(.body // "") | @base64' > "${OUT_FILE}.b64"
           base64 -d < "${OUT_FILE}.b64" > "${OUT_FILE}.in"
           export BODY_FILE="${OUT_FILE}.in"
-          node scripts/ai-review-buttons.mjs
+          node ci/scripts/ai-review-buttons.mjs
           if cmp -s "${OUT_FILE}.in" "$OUT_FILE"; then
             echo "Body unchanged; nothing to PATCH."
             exit 0
@@ -79,7 +79,7 @@ jobs:
             export PATCH_FILE="${RUNNER_TEMP}/patch-${number}.json"
             gh api "repos/${GITHUB_REPOSITORY}/pulls/${number}" --jq '(.body // "") | @base64' > "${BODY_FILE}.b64"
             base64 -d < "${BODY_FILE}.b64" > "$BODY_FILE"
-            node scripts/ai-review-buttons.mjs
+            node ci/scripts/ai-review-buttons.mjs
             if cmp -s "$BODY_FILE" "$OUT_FILE"; then
               continue
             fi
