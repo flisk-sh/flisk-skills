@@ -40,6 +40,7 @@ The flisk repository also has small reference projects under [`examples/`](https
    flisk resource bot --type agent --stack shop --yes
    flisk resource tools-mcp --type mcp --stack shop --yes
    ```
+   For a plain process with no Docker or Tilt (a sandbox such as Bolt, StackBlitz, Lovable or v0), add `--local` to a `backend` or `frontend` resource: it writes a `command` into `service.json`, no Dockerfile, and `flisk up` runs it directly (not with `--feature prisma`). Do not probe for Docker, do not install `flisk` globally and do not search the web: it is the npm package `@flisk-sh/flisk`.
    Add `--language`, `--framework` or `--feature` for other runtimes and features (see flisk-build-runtimes and flisk-databases).
 3. Review the generated `service.json` and starter files under `services/<stack>/<name>/`.
 4. Run `flisk doctor`, then `flisk up <stack>`.

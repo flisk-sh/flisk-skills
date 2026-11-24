@@ -5,7 +5,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-30+-blue)](skills)
 [![Agent Skills](https://img.shields.io/badge/spec-agentskills.io-green)](https://agentskills.io/specification)
-[![skills.sh](https://skills.sh/b/flisk-sh/flisk-skills)](https://skills.sh/flisk-sh/flisk-skills)
+<!-- skills.sh still indexes this repo under its old name, tdk-skills. Point these back at flisk-sh/flisk-skills once skills.sh re-indexes the rename. -->
+[![skills.sh](https://skills.sh/b/flisk-sh/tdk-skills)](https://skills.sh/flisk-sh/tdk-skills)
 
 English | Skills for coding agents that drive the **local-only** Flisk CLI.
 
@@ -26,7 +27,7 @@ curl -fsSL https://raw.githubusercontent.com/flisk-sh/flisk-skills/main/rules/AG
 
 `install.sh` flags: `--agent claude|codex|opencode|cursor|agents`, `--global`, `--project` (default). It only creates symlinks (never copies markdown, never uses `sudo`).
 
-[Website](https://flisk.sh/) · [Agents guide](https://flisk.sh/docs/agents/) · [Quickstart](https://flisk.sh/docs/quickstart/) · [flisk](https://github.com/flisk-sh/flisk) · [skills.sh](https://skills.sh/flisk-sh/flisk-skills) · [Report a bug](https://github.com/flisk-sh/flisk-skills/issues)
+[Website](https://flisk.sh/) · [Agents guide](https://flisk.sh/docs/agents/) · [Quickstart](https://flisk.sh/docs/quickstart/) · [flisk](https://github.com/flisk-sh/flisk) · [skills.sh](https://skills.sh/flisk-sh/tdk-skills) · [Report a bug](https://github.com/flisk-sh/flisk-skills/issues)
 
 If Flisk Skills help your agents, a ⭐ on [this repo](https://github.com/flisk-sh/flisk-skills) helps other developers find them.
 
@@ -47,6 +48,8 @@ If Flisk Skills help your agents, a ⭐ on [this repo](https://github.com/flisk-
 | `flisk-build-runtimes` | Pick the language or framework of a new service (Bun, Python, Go, Rust, Node; React, Vue, Next.js and more). |
 | `flisk-frontend` | Add a web app to a stack and work with its generated nginx, Vite and API client files. |
 | `flisk-agents` | Build and operate AI agent resources: the session contract, checkpoints and `flisk agent sessions`. |
+| `flisk-demo-bubbles` | Hand out a personalised demo.flisk.si stack for a person: link, JSON API or the `make_demo` MCP tool. |
+| `flisk-unfollowers` | Who unfollowed an X account in a 10m, 1h or 1d window, from stored follower lists (`get_unfollowers` MCP tool). |
 | `flisk-byo` | Bring an existing Dockerfile, image or one-shot job into a stack as a bring-your-own resource. |
 | `flisk-import-compose` | Import a root `docker-compose.yml` with `flisk import`. |
 | `flisk-import-procfile` | Turn Procfile processes into bring-your-own resources. |
